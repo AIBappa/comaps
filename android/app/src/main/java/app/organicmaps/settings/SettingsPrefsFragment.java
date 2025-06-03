@@ -25,6 +25,8 @@ import app.organicmaps.help.HelpActivity;
 import app.organicmaps.location.LocationHelper;
 import app.organicmaps.location.LocationProviderFactory;
 import app.organicmaps.sdk.routing.RoutingOptions;
+import app.organicmaps.universalbuttons.UniversalButton;
+import app.organicmaps.universalbuttons.UniversalButtonsHolder;
 import app.organicmaps.util.Config;
 import app.organicmaps.util.NetworkPolicy;
 import app.organicmaps.util.PowerManagment;
@@ -35,6 +37,9 @@ import app.organicmaps.util.log.LogsManager;
 import app.organicmaps.sdk.search.SearchRecents;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Locale;
 
 public class SettingsPrefsFragment extends BaseXmlSettingsFragment implements LanguagesFragment.Listener
@@ -68,6 +73,59 @@ public class SettingsPrefsFragment extends BaseXmlSettingsFragment implements La
     initSearchPrivacyPrefsCallbacks();
     initScreenSleepEnabledPrefsCallbacks();
     initShowOnLockScreenPrefsCallbacks();
+    initUniversalButtonPrefs();
+  }
+
+  private void initUniversalButtonPrefs()
+  {
+    final ListPreference pref = getPreference(UniversalButtonsHolder.KEY_PREF_UNIVERSAL_BUTTON);
+    UniversalButtonsHolder holder = UniversalButtonsHolder.getInstance(requireContext());
+
+    UniversalButton currentButton = holder.getActiveButton();
+    Collection<UniversalButton> buttons = holder.getAllButtons();
+
+    List<String> entryList = new ArrayList<>(buttons.size() + 1);
+    List<String> valueList = new ArrayList<>(buttons.size() + 1);
+
+    String notDisplayId = "not_display";
+
+    entryList.add(requireContext().getString(R.string.pref_universal_button_not_display));
+    valueList.add(notDisplayId);
+
+    for (UniversalButton button : buttons)
+    {
+      entryList.add(button.getPrefsName());
+      valueList.add(button.getCode());
+    }
+
+    pref.setEntries(entryList.toArray(new CharSequence[0]));
+    pref.setEntryValues(valueList.toArray(new CharSequence[0]));
+
+    if (currentButton != null)
+    {
+      pref.setSummary(currentButton.getPrefsName());
+      pref.setValue(currentButton.getCode());
+    }
+    else
+    {
+      pref.setSummary(R.string.pref_universal_button_not_display);
+      pref.setValue(notDisplayId);
+    }
+
+    pref.setOnPreferenceChangeListener((preference, newValue) -> {
+      int index = pref.findIndexOfValue(newValue.toString());
+      if (index >= 0)
+      {
+        pref.setSummary(pref.getEntries()[index]);
+      }
+
+      Intent intent = new Intent();
+      intent.putExtra(UniversalButtonsHolder.KEY_PREF_UNIVERSAL_BUTTON, newValue.toString());
+
+      requireActivity().setResult(-1, intent);
+
+      return true;
+    });
   }
 
   private void updateVoiceInstructionsPrefsSummary()

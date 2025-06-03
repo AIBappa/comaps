@@ -106,6 +106,12 @@
         app:singleLineTitle="false"
         android:persistent="false"
         android:order="18"/>
+    <ListPreference
+        android:key="universal_button"
+        android:title="@string/pref_universal_button"
+        app:singleLineTitle="false"
+        android:persistent="true"
+        android:order="20"/>
   </androidx.preference.PreferenceCategory>
 
   <androidx.preference.PreferenceCategory

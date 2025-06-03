@@ -930,4 +930,6 @@
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Auto in navigation</string>
     <string name="codeberg">Codeberg</string>
+    <string name="pref_universal_button">Universal button setup</string>
+    <string name="pref_universal_button_not_display">Do not display</string>
 </resources>
