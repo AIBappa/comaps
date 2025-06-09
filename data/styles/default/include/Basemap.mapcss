@@ -141,10 +141,11 @@ area|z14-[landuse=recreation_ground],
 area|z14-[landuse=village_green],
 area|z14-[landuse=field],
 {fill-color: @green1;}
+area|z11[landuse=forest],
 area|z16-[natural=grassland],
 area|z16-[landuse=meadow],
 {fill-color: @green1b;}
-area|z11-12[landuse=forest],
+area|z12[landuse=forest],
 area|z12[leisure=garden],
 {fill-color: @green2;}
 area|z13[landuse=forest],
@@ -605,13 +606,13 @@ line|z19-[barrier=hedge],
 
 line|z14-[barrier=city_wall],
 line|z14-[historic=citywalls],
-{color: @building1; width: 2; opacity: 0.7;}
+{color: @building_border1; width: 2; opacity: 0.9;}
 line|z15[barrier=city_wall],
 line|z15[historic=citywalls],
 {width: 2.8;}
 line|z16-[barrier=city_wall],
 line|z16-[historic=citywalls],
-{color: @building0; width: 4.5; dashes: 3,3,1.5,3;}
+{cwidth: 4.5; dashes: 3,3,1.5,3;}
 line|z17[barrier=city_wall],
 line|z17[historic=citywalls],
 {width: 5.9; dashes: 4,4,1.9,4;}
@@ -656,7 +657,7 @@ line|z18-[barrier=retaining_wall],
 
 
 line|z16-[man_made=embankment],
-{color: @building1; width: 3.5; dashes: 4,2,2,1.5; opacity: 0.7;}
+{color: @building_border0; width: 3.5; dashes: 4,2,2,1.5; opacity: 0.7;}
 line|z17[man_made=embankment],
 {width: 5; dashes: 6,3,3,2;}
 line|z18-[man_made=embankment],
