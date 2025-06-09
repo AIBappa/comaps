@@ -41,7 +41,7 @@
 @water: #8AD8E7;
 @water_bad: #95C5B8;
 @river: #5FB4C5;
-@wetland: #A8DCDC;
+@wetland: #C3E0D1;
 @beach: #FFE7B7;
 @barerock: #D9D2BF;
 @scree: #CCC7BA;
@@ -63,8 +63,8 @@
 /* 4.LANDUSE */
 /*4.1 Main landuse*/
 
-@pedestrian_area: #F7EAD8;
-@pedestrian_area_light: #F7EBD9;
+@pedestrian_area: #F6EBDC;
+@pedestrian_area_light: #F7EDDF;
 @university: #F8E3C2;
 @hospital: #FFDAD6;
 @industrial: #E8E6E1;
@@ -101,20 +101,20 @@
 /* 5.ROADS */
 /* 5.1 All roads */
 
-@motorway0: #F07800;
+@motorway0: #F57A00;
 @motorway1: #F08800;
-@trunk0: #F2A62B;
-@trunk1: #F5A72C;
-@primary0: #F5B64C;
-@primary1: #F5BE62;
-@primary2: #F5BD5F;
-@secondary0: #F9C469;
+@trunk0: #F09D18;
+@trunk1: #F2A327;
+@primary0: #F5B74E;
+@primary1: #F2BA52;
+@primary2: #F2BD5C;
+@secondary0: #FFCB70;
 @secondary1: #F9CA7A;
 @tertiary: #FFFFFF;
 @residential: #FFFFFF;
 @pedestrian: #FFFAF5;
 @footway: #FFFAF5;
-@cycleway: #FFB88B;
+@cycleway: #605EFE;
 @construction: #C1A06B;
 @track: #635730;
 @path: #8E4E1D;
@@ -173,7 +173,7 @@
 
 /* 6.2 Natural labels */
 
-@water_label: #1D8EA4;
+@water_label: #278FA2;
 @park_label: #3A7921;
 @halo_park_label: #FFFFFF;
 
