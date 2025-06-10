@@ -56565,63 +56565,63 @@ cont {
   element {
     scale: 12
     area {
-      color: 13161612
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 13
     area {
-      color: 13161612
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 14
     area {
-      color: 12898689
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 15
     area {
-      color: 12898689
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 16
     area {
-      color: 12898689
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 17
     area {
-      color: 12898689
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 18
     area {
-      color: 12898689
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 19
     area {
-      color: 12898689
+      color: 13555607
       priority: -1880
     }
   }
   element {
     scale: 20
     area {
-      color: 12898689
+      color: 13555607
       priority: -1880
     }
   }
