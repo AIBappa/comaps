@@ -50,6 +50,7 @@
 /*3.2 Vegetation*/
 
 @forest: #141C00;
+@heath: #0F1400;
 @green0: #0F1400;
 @green1: #131900;
 @green1b: #141C00;

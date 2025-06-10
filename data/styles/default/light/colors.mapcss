@@ -49,6 +49,7 @@
 
 /*3.2 Vegetation*/
 
+@heath: #CED797;
 @green0: #C8D48C;
 @green1: #C4D181;
 @green1b: #BECC76;
