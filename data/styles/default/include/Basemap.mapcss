@@ -612,7 +612,7 @@ line|z15[historic=citywalls],
 {width: 2.8;}
 line|z16-[barrier=city_wall],
 line|z16-[historic=citywalls],
-{cwidth: 4.5; dashes: 3,3,1.5,3;}
+{width: 4.5; dashes: 3,3,1.5,3;}
 line|z17[barrier=city_wall],
 line|z17[historic=citywalls],
 {width: 5.9; dashes: 4,4,1.9,4;}

@@ -73,7 +73,7 @@
 @sport1: #E8E8C3;
 @sport2: #D4E796;
 @parking: #F6F0E9;
-@military: #E22520;
+@military: #E53935;
 @prison: #727272;
 @farmland: #E4E0AD;
 @farmyard: #E6D6AF;
@@ -104,15 +104,15 @@
 
 @motorway0: #F57A00;
 @motorway1: #F08800;
-@trunk0: #F09D18;
-@trunk1: #F2A327;
+@trunk0: #F29718;
+@trunk1: #F29E30;
 @primary0: #F5B74E;
-@primary1: #F2BA52;
-@primary2: #F2BD5C;
-@secondary0: #FFCB70;
-@secondary1: #F9CA7A;
+@primary1: #FABB40;
+@primary2: #FAC256;
+@secondary0: #FFCE5A;
+@secondary1: #FFD573;
 @tertiary: #FFFFFF;
-@residential: #FFFFFF;
+@residential: #FFFEFE;
 @pedestrian: #FFFAF5;
 @footway: #FFFAF5;
 @cycleway: #605EFE;
@@ -139,7 +139,7 @@
 @secondary_tunnel_casing:  #808080;
 @tertiary_tunnel: #FFFFFF;
 @tertiary_tunnel_casing:  #808080;
-@residential_tunnel: #FFFFFF;
+@residential_tunnel: #FFFEFE;
 @residential_tunnel_casing: #808080;
 
 /* 5.4 Piste */
