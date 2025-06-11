@@ -806,7 +806,7 @@ line|z14[highway=cycleway],
 line|z14[highway=path][bicycle=designated]::cycleline,
 {opacity: 0.6;}
 line|z15[highway=cycleway],
-line|z15[highway=imaryath][bicycle=designated]::cycleline,
+line|z15[highway=path][bicycle=designated]::cycleline,
 {opacity: 0.8;}
 line|z16-17[highway=cycleway],
 line|z16-17[highway=path][bicycle=designated]::cycleline,
