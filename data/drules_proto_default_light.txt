@@ -26899,7 +26899,7 @@ cont {
     scale: 15
     lines {
       width: 1.2
-      color: 6315774
+      color: 861953790
       dashdot {
         dd: 7.0
         dd: 9.6
