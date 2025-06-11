@@ -76,20 +76,20 @@ line|z9[highway=world_level]
 line|z6[highway=motorway],
 {color: @motorway0; opacity: 1;}
 line|z6[highway=trunk],
-{color: @trunk1; opacity: 0.6;}
-line|z7-9[highway=motorway],
+{color: @trunk0; opacity: 0.6;}
+line|z7-13[highway=motorway],
 {color: @motorway0; opacity: 1;}
 line|z7-9[highway=trunk],
 {color: @trunk0; opacity: 0.8;}
-line|z10-[highway=motorway],
-{color: @motorway1; opacity: 0.7;}
-line|z10-[highway=trunk],
-{color: @trunk1; opacity: 0.8;}
+line|z10-13[highway=trunk],
+{color: @trunk1; opacity: 1;}
+line|z14-[highway=motorway],
+{color: @motorway1;}
+line|z14-[highway=trunk],
+{color: @trunk1; opacity: 0.9;}
 line|z10-[highway=motorway_link],
 line|z10-[highway=trunk_link],
 {color: @primary0; opacity: 0.7;}
-line|z13-14[highway=trunk],
-{color: @trunk1; opacity: 0.9;}
 line|z13-14[highway=motorway],
 line|z14-15[highway=motorway_link],
 line|z14-15[highway=trunk_link],
@@ -114,21 +114,21 @@ line|z14-[highway=trunk_link][bridge?]::bridgeblack,
 /* 3.1 Trunk & Motorway 6-22 ZOOM */
 
 line|z6[highway=motorway],
-{width: 0.9;}
+{width: 1.5;}
 line|z7[highway=motorway]
-{width: 1.0;}
+{width: 1.6;}
 line|z8[highway=motorway]
-{width: 1.2;}
-line|z9[highway=motorway]
-{width: 1.3;}
-line|z10[highway=motorway]
 {width: 1.7;}
-line|z11[highway=motorway]
+line|z9[highway=motorway]
 {width: 1.8;}
-line|z12[highway=motorway]
+line|z10[highway=motorway]
+{width: 1.9;}
+line|z11[highway=motorway]
 {width: 2.0;}
+line|z12[highway=motorway]
+{width: 2.1;}
 line|z13[highway=motorway],
-{width: 2.9;}
+{width: 3.0;}
 line|z14[highway=motorway],
 {width: 3.9;}
 line|z15[highway=motorway],
@@ -374,13 +374,10 @@ line|z18-[highway=primary_link][bridge?]::bridgeblack,
 
 /* 5.SECONDARY 10-22 ZOOM */
 
-line|z10-12[highway=secondary],
+line|z10-13[highway=secondary],
 {color: @secondary0; opacity: 1;}
-line|z13-14[highway=secondary],
-line|z13-14[highway=secondary_link],
-{color: @secondary1; opacity: 1;}
-line|z15-[highway=secondary],
-line|z15-[highway=secondary_link],
+line|z14-[highway=secondary],
+line|z14-[highway=secondary_link],
 {color: @secondary1; opacity: 1;}
 
 line|z14-[highway=secondary][bridge?]::bridgewhite,
@@ -804,12 +801,12 @@ line|z16-[highway=pedestrian][bridge?]::bridgeblack,
 /* 8.4 Cycleway 13-22 ZOOM */
 
 line|z13[highway=cycleway],
-{opacity: 0.6;}
+{opacity: 0.5;}
 line|z14[highway=cycleway],
 line|z14[highway=path][bicycle=designated]::cycleline,
-{opacity: 0.7;}
+{opacity: 0.6;}
 line|z15[highway=cycleway],
-line|z15[highway=path][bicycle=designated]::cycleline,
+line|z15[highway=imaryath][bicycle=designated]::cycleline,
 {opacity: 0.8;}
 line|z16-17[highway=cycleway],
 line|z16-17[highway=path][bicycle=designated]::cycleline,
@@ -819,9 +816,9 @@ line|z18-[highway=path][bicycle=designated]::cycleline,
 {opacity: 1;}
 
 line|z15-16[highway=footway][bicycle=designated]::cycleline,
-{opacity: 0.6;}
-line|z15-16[highway=footway][bicycle=designated]::cycleline,
-{opacity: 0.7;}
+{opacity: 0.8;}
+line|z17[highway=footway][bicycle=designated]::cycleline,
+{opacity: 0.9;}
 
 line|z13[highway=cycleway]
 {width: 0.9;}
@@ -829,25 +826,31 @@ line|z14[highway=cycleway],
 line|z14[highway=path][bicycle=designated]::cycleline,
 {width: 1.1;}
 line|z15[highway=cycleway]
-line|z15[highway=footway][bicycle=designated]::cycleline,
 line|z15[highway=path][bicycle=designated]::cycleline,
 {width: 1.2;}
 line|z16[highway=cycleway],
-line|z16[highway=footway][bicycle=designated]::cycleline,
 line|z16[highway=path][bicycle=designated]::cycleline,
 {width: 1.3;}
 line|z17[highway=cycleway],
-line|z17[highway=footway][bicycle=designated]::cycleline,
 line|z17[highway=path][bicycle=designated]::cycleline,
 {width: 1.4;}
 line|z18[highway=cycleway],
-line|z18[highway=footway][bicycle=designated]::cycleline,
 line|z18[highway=path][bicycle=designated]::cycleline,
 {width: 1.6;}
 line|z19-[highway=cycleway],
-line|z19-[highway=footway][bicycle=designated]::cycleline,
 line|z19-[highway=path][bicycle=designated]::cycleline,
 {width: 1.8;}
+
+line|z15[highway=footway][bicycle=designated]::cycleline,
+{width: 1.5;}
+line|z16[highway=footway][bicycle=designated]::cycleline,
+{width: 2;}
+line|z17[highway=footway][bicycle=designated]::cycleline,
+{width: 2.4;}
+line|z18[highway=footway][bicycle=designated]::cycleline,
+{width: 3.2;}
+line|z19-[highway=footway][bicycle=designated]::cycleline,
+{width: 4.2;}
 
 line|z17[highway=cycleway][tunnel?]::tunnelBackground
 {casing-width-add: 1;}
@@ -1020,6 +1023,7 @@ line|z18[highway=footway][bicycle=designated],
 {width: 3.2; dashes: none; opacity: 1;}
 line|z19-[highway=footway][bicycle=designated],
 {width: 4.2; dashes: none; opacity: 1;}
+
 
 /* Don't display sidewalks and pedestrian crossings on z15. */
 line|z15[highway=footway][footway=sidewalk],
