@@ -24671,10 +24671,6 @@ cont {
     lines {
       width: 1.5
       color: 862862663
-      dashdot {
-        dd: 7.0
-        dd: 9.6
-      }
       priority: 170
       cap: BUTTCAP
     }
@@ -24702,10 +24698,6 @@ cont {
     lines {
       width: 1.7
       color: 862862663
-      dashdot {
-        dd: 7.5
-        dd: 9.5
-      }
       priority: 170
     }
     lines {
@@ -24731,10 +24723,6 @@ cont {
     lines {
       width: 2.0
       color: 862862663
-      dashdot {
-        dd: 8.0
-        dd: 9.4
-      }
       priority: 170
     }
     lines {
@@ -24760,10 +24748,6 @@ cont {
     lines {
       width: 2.4
       color: 862862663
-      dashdot {
-        dd: 8.5
-        dd: 9.3
-      }
       priority: 170
     }
     lines {
@@ -24789,10 +24773,6 @@ cont {
     lines {
       width: 2.4
       color: 862862663
-      dashdot {
-        dd: 9.0
-        dd: 9.2
-      }
       priority: 170
     }
     lines {
@@ -24818,10 +24798,6 @@ cont {
     lines {
       width: 2.4
       color: 862862663
-      dashdot {
-        dd: 9.0
-        dd: 9.2
-      }
       priority: 170
     }
     lines {
