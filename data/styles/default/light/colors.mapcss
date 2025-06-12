@@ -115,7 +115,7 @@
 @residential: #FFFEFE;
 @pedestrian: #FFFAF5;
 @footway: #FFFAF5;
-@cycleway: #605EFE;
+@cycleway: #6F6DFF;
 @construction: #C1A06B;
 @track: #635730;
 @path: #8E4E1D;
