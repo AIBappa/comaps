@@ -669,6 +669,7 @@ highway-residential-tunnel::shield                  # shield::shield z15- (also 
 === 2955
 
 highway-footway-bicycle                             # pathtext z13- (also has line z11-, line::cycleline z13-)
+highway-path-bicycle                                # pathtext z13- (also has line z11-, line::cycleline z13-)
 === 2954
 
 highway-cycleway                                    # pathtext z13- (also has line z11-)
@@ -708,7 +709,6 @@ highway-bridleway                                   # pathtext z13- (also has li
 highway-bridleway-bridge                            # pathtext z13- (also has line z11-, line::bridgeblack z17-, line::bridgewhite z15-)
 highway-bridleway-tunnel                            # pathtext z13- (also has line z11-, line::tunnelBackground z17-, line::tunnelCasing z17-)
 highway-path                                        # pathtext z13- (also has line z11-)
-highway-path-bicycle                                # pathtext z13- (also has line z11-, line::cycleline z13-)
 highway-path-bridge                                 # pathtext z13- (also has line z11-, line::bridgeblack z17-, line::bridgewhite z15-)
 highway-path-difficult                              # pathtext z13- (also has line z11-)
 highway-path-expert                                 # pathtext z13- (also has line z11-)
@@ -1007,7 +1007,7 @@ amenity-shelter                                     # icon z12- (also has captio
 amenity-shelter-public_transport                    # icon z14- (also has caption(optional) z14-)
 emergency-lifeguard                                 # icon z14- (also has caption(optional) z18-)
 leisure-fitness_station                             # icon z17- (also has caption(optional) z17-)
-leisure-playground                                  # icon z17- (also has caption(optional) z17-, area z16-)
+leisure-playground                                  # icon z17- (also has caption(optional) z17-, area z15-)
 natural-cliff                                       # pathtext z14- (also has line z12-)
 === 1500
 
@@ -1963,7 +1963,7 @@ leisure-swimming_pool-private                       # icon z17- (also has captio
 # amenity-shelter-public_transport                  # caption(optional) z14- (also has icon z14-)
 # emergency-lifeguard                               # caption(optional) z18- (also has icon z14-)
 # leisure-fitness_station                           # caption(optional) z17- (also has icon z17-)
-# leisure-playground                                # caption(optional) z17- (also has icon z17-, area z16-)
+# leisure-playground                                # caption(optional) z17- (also has icon z17-, area z15-)
 # === -8500
 
 # sport-american_football                           # caption(optional) z17- (also has icon z17-)

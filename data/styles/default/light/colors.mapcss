@@ -66,14 +66,15 @@
 
 @pedestrian_area: #F6EBDC;
 @pedestrian_area_light: #F7EDDF;
-@university: #F8E3C2;
+@university: #F5DFBC;
 @hospital: #FFDAD6;
-@industrial: #E8E6E1;
+@industrial: #E5E5E4;
 @sport0: #F5EED3;
 @sport1: #E8E8C3;
 @sport2: #D4E796;
+@playground: #E4E7A2;
 @parking: #F6F0E9;
-@military: #E53935;
+@military: #DE2D28;
 @prison: #727272;
 @farmland: #E4E0AD;
 @farmyard: #E6D6AF;
@@ -98,6 +99,7 @@
 @building1: #D0D1CC;
 @building_border0: #A1A096;
 @building_border1: #9B9A8F;
+@historic_wall: #AEAD9E;
 
 /* 5.ROADS */
 /* 5.1 All roads */
@@ -115,8 +117,8 @@
 @residential: #FFFEFE;
 @pedestrian: #FFFAF5;
 @footway: #FFFAF5;
-@cycleway: #6F6DFF;
-@construction: #C1A06B;
+@cycleway: #8B8AFF;
+@construction: #B2B8C8;
 @track: #635730;
 @path: #8E4E1D;
 @path_expert: #3D2617;

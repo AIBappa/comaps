@@ -361,8 +361,11 @@ area|z15-[landuse=education],
 area|z16-[public_transport=platform],
 area|z16-[amenity=place_of_worship],
 area|z16-[railway=platform],
-area|z16-[leisure=playground],
+area|z15-[leisure=playground],
 {fill-opacity: 1;}
+
+area|z15-[amenity=university],
+{fill-opacity: 0.9;}
 
 /* 7.1 Industrial */
 
@@ -391,8 +394,10 @@ area|z15-[landuse=education],
 
 area|z15-[leisure=pitch],
 area|z15-[leisure=track][area?],
-area|z16-[leisure=playground],
 {fill-color: @sport2;}
+
+area|z15-[leisure=playground],
+{fill-color: @playground;}
 
 area|z15-[leisure=stadium]
 {fill-color: @sport1;}
@@ -606,7 +611,7 @@ line|z19-[barrier=hedge],
 
 line|z14-[barrier=city_wall],
 line|z14-[historic=citywalls],
-{color: @building_border1; width: 2; opacity: 0.9;}
+{color: @historic_wall; width: 2; opacity: 0.9;}
 line|z15[barrier=city_wall],
 line|z15[historic=citywalls],
 {width: 2.8;}
