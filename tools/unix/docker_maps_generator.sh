@@ -53,13 +53,13 @@ echo "endpoint = $S3_ENDPOINT" >> ~/.config/rclone/rclone.conf
 
 echo "<$(date +%T)> Running ./configure.sh ..."
 cd ~/OM/organicmaps
-./configure.sh
+./configure.sh --skip-map-download --skip-generate-symbols
 
 echo "<$(date +%T)> Compiling tools..."
 cd ~/OM/organicmaps
 ./tools/unix/build_omim.sh -R generator_tool
-./tools/unix/build_omim.sh -R world_roads_builder_tool
-./tools/unix/build_omim.sh -R mwm_diff_tool
+#./tools/unix/build_omim.sh -R world_roads_builder_tool
+#./tools/unix/build_omim.sh -R mwm_diff_tool
 cd tools/python/maps_generator
 python3 -m venv /tmp/venv
 /tmp/venv/bin/pip3 install -r requirements_dev.txt
@@ -102,7 +102,7 @@ fi
 
 echo "<$(date +%T)> Generating maps..."
 cd ~/OM/organicmaps/tools/python
-/tmp/venv/bin/python -m maps_generator --skip="MwmDiffs"
+/tmp/venv/bin/python -m maps_generator --countries="Laos" --skip="Coastline,Ugc,Popularity,Descriptions,Routing,RoutingTransit,MwmDiffs,Statistics"
 #/tmp/venv/bin/python -m maps_generator --skip="MwmDiffs" --continue
 
 # do not use --production except for Kayak/recommendation/popularity/food data

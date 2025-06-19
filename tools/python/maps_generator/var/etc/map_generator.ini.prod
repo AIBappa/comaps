@@ -51,7 +51,7 @@ LOG_FILE_PATH: ${Main:MAIN_OUT_PATH}/generation.log
 # Here and further, its possible to specify either an URL (to be downloaded automatically)
 # or a local file path like file:///path/to/file.
 # A sample URL to download a latest OSM dump for North Macedonia:
-PLANET_URL: file:///home/planet/planet/planet.o5m
+PLANET_URL: file:///home/planet/planet/laos.o5m
 # Location of the md5 checksum of the planet file:
 PLANET_MD5_URL: ${External:PLANET_URL}.md5
 # A base url to the latest_coasts.geom and latest_coasts.rawgeom files.
@@ -80,7 +80,7 @@ SUBWAY_URL: file:///home/planet/subway/subway.transit.json
 # FOOD_TRANSLATIONS_URL:
 
 SRTM_PATH: /home/planet/SRTM-patched-europe/
-ISOLINES_PATH: /home/planet/isolines/
+ISOLINES_PATH: /home/planet/isolines-pastk3/
 ADDRESSES_PATH: /home/planet/tiger/
 
 # Local path (not url!) to .csv files.
