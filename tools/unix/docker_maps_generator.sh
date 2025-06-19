@@ -58,8 +58,8 @@ cd ~/OM/organicmaps
 echo "<$(date +%T)> Compiling tools..."
 cd ~/OM/organicmaps
 ./tools/unix/build_omim.sh -R generator_tool
-#./tools/unix/build_omim.sh -R world_roads_builder_tool
-#./tools/unix/build_omim.sh -R mwm_diff_tool
+./tools/unix/build_omim.sh -R world_roads_builder_tool
+./tools/unix/build_omim.sh -R mwm_diff_tool
 cd tools/python/maps_generator
 python3 -m venv /tmp/venv
 /tmp/venv/bin/pip3 install -r requirements_dev.txt
