@@ -385,7 +385,8 @@
 
     <androidx.cardview.widget.CardView
       android:id="@+id/cv__more"
-      style="@style/MwmWidget.Editor.CardView">
+      style="@style/MwmWidget.Editor.CardView"
+      android:layout_marginBottom="@dimen/margin_double">
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -415,7 +416,20 @@
     <androidx.cardview.widget.CardView
       android:id="@+id/cv__more"
       style="@style/MwmWidget.Editor.CardView"
-      android:layout_marginTop="@dimen/margin_double"
+      android:layout_marginBottom="@dimen/margin_half">
+      <TextView
+        android:id="@+id/disused"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="?selectableItemBackground"
+        android:gravity="center"
+        android:textAppearance="@style/MwmTextAppearance.Button"
+        android:textColor="@color/base_red"
+        android:text="Shop is vacant"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+      android:id="@+id/cv__more"
+      style="@style/MwmWidget.Editor.CardView"
       android:layout_marginBottom="@dimen/margin_base">
       <TextView
         android:id="@+id/reset"
