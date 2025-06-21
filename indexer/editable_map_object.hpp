@@ -135,6 +135,7 @@ public:
   void SetJournal(EditJournal && editJournal);
   EditingLifecycle GetEditingLifecycle() const;
   void MarkAsCreated(uint32_t type, feature::GeomType geomType, m2::PointD mercator);
+  void MarkAsDisused();
   void ClearJournal();
   void ApplyEditsFromJournal(EditJournal const & journal);
   void ApplyJournalEntry(JournalEntry const & entry);

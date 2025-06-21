@@ -603,6 +603,11 @@ void EditableMapObject::MarkAsCreated(uint32_t type, feature::GeomType geomType,
   m_journal.MarkAsCreated(type, geomType, std::move(mercator));
 }
 
+void EditableMapObject::MarkAsDisused()
+{
+  SetType(classif().GetTypeByReadableObjectName("shop-gift"));
+}
+
 void EditableMapObject::ClearJournal()
 {
   m_journal.Clear();

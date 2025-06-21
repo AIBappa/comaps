@@ -406,6 +406,12 @@ Java_app_organicmaps_editor_Editor_nativeRollbackMapObject(JNIEnv * env, jclass 
   g_framework->NativeFramework()->RollBackChanges(g_editableMapObject.GetID());
 }
 
+JNIEXPORT void JNICALL
+Java_app_organicmaps_editor_Editor_nativeMarkPlaceAsDisused(JNIEnv * env, jclass clazz)
+{
+  g_editableMapObject.MarkAsDisused();
+}
+
 JNIEXPORT jobjectArray JNICALL
 Java_app_organicmaps_editor_Editor_nativeGetAllCreatableFeatureTypes(JNIEnv * env, jclass clazz,
                                                                          jstring jLang)

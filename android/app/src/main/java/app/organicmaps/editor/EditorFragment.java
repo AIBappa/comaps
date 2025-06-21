@@ -701,7 +701,8 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
       .setMessage("Use this option when when a store moved out and empty rooms are still there " +
         "for a new shop to move in. Don't use when place is razed entirely.")
       .setPositiveButton(android.R.string.ok, (dlg, which) -> {
-        //Todo
+        Editor.nativeMarkPlaceAsDisused();
+        Editor.nativeSaveEditedFeature();
         mParent.onBackPressed();
       })
       .setNegativeButton(android.R.string.cancel, null)
