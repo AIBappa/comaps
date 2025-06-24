@@ -26839,19 +26839,6 @@ cont {
 cont {
   name: "highway-path"
   element {
-    scale: 14
-    lines {
-      width: 0.9
-      color: 1720602141
-      dashdot {
-        dd: 3.5
-        dd: 2.0
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
-  element {
     scale: 15
     lines {
       width: 1.1
@@ -26985,7 +26972,6 @@ cont {
     }
     lines {
       width: 0.9
-      color: 1720602141
       dashdot {
         dd: 3.5
         dd: 2.7
@@ -27149,19 +27135,6 @@ cont {
 }
 cont {
   name: "highway-path-bridge"
-  element {
-    scale: 14
-    lines {
-      width: 0.9
-      color: 1720602141
-      dashdot {
-        dd: 3.5
-        dd: 2.0
-      }
-      priority: 155
-      cap: BUTTCAP
-    }
-  }
   element {
     scale: 15
     lines {
@@ -27347,19 +27320,6 @@ cont {
 cont {
   name: "highway-path-difficult"
   element {
-    scale: 14
-    lines {
-      width: 0.9
-      color: 1720602141
-      dashdot {
-        dd: 1.0
-        dd: 2.0
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
-  element {
     scale: 15
     lines {
       width: 1.1
@@ -27483,19 +27443,6 @@ cont {
 }
 cont {
   name: "highway-path-expert"
-  element {
-    scale: 14
-    lines {
-      width: 0.9
-      color: 1715283479
-      dashdot {
-        dd: 1.0
-        dd: 4.0
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
   element {
     scale: 15
     lines {
@@ -27621,19 +27568,6 @@ cont {
 cont {
   name: "highway-path-horse"
   element {
-    scale: 14
-    lines {
-      width: 0.9
-      color: 1720602141
-      dashdot {
-        dd: 3.5
-        dd: 2.0
-      }
-      priority: 155
-      cap: BUTTCAP
-    }
-  }
-  element {
     scale: 15
     lines {
       width: 1.1
@@ -27757,19 +27691,6 @@ cont {
 }
 cont {
   name: "highway-path-tunnel"
-  element {
-    scale: 14
-    lines {
-      width: 0.9
-      color: 1720602141
-      dashdot {
-        dd: 3.5
-        dd: 2.0
-      }
-      priority: 155
-      cap: BUTTCAP
-    }
-  }
   element {
     scale: 15
     lines {
@@ -35771,19 +35692,6 @@ cont {
 cont {
   name: "highway-track"
   element {
-    scale: 14
-    lines {
-      width: 1.1
-      color: 1717786416
-      dashdot {
-        dd: 6.0
-        dd: 2.5
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
-  element {
     scale: 15
     lines {
       width: 1.4
@@ -35908,19 +35816,6 @@ cont {
 cont {
   name: "highway-track-area"
   element {
-    scale: 14
-    lines {
-      width: 1.1
-      color: 1717786416
-      dashdot {
-        dd: 6.0
-        dd: 2.5
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
-  element {
     scale: 15
     lines {
       width: 1.4
@@ -36044,19 +35939,6 @@ cont {
 }
 cont {
   name: "highway-track-bridge"
-  element {
-    scale: 14
-    lines {
-      width: 1.1
-      color: 1717786416
-      dashdot {
-        dd: 6.0
-        dd: 2.5
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
   element {
     scale: 15
     lines {
@@ -36242,19 +36124,6 @@ cont {
 cont {
   name: "highway-track-no-access"
   element {
-    scale: 14
-    lines {
-      width: 1.1
-      color: 1717786416
-      dashdot {
-        dd: 6.0
-        dd: 2.5
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
-  element {
     scale: 15
     lines {
       width: 1.4
@@ -36378,19 +36247,6 @@ cont {
 }
 cont {
   name: "highway-track-tunnel"
-  element {
-    scale: 14
-    lines {
-      width: 1.1
-      color: 1717786416
-      dashdot {
-        dd: 6.0
-        dd: 2.5
-      }
-      priority: 180
-      cap: BUTTCAP
-    }
-  }
   element {
     scale: 15
     lines {
@@ -63178,19 +63034,6 @@ cont {
 }
 cont {
   name: "piste:type-hike"
-  element {
-    scale: 14
-    lines {
-      width: 0.9
-      color: 2579790591
-      dashdot {
-        dd: 3.5
-        dd: 2.0
-      }
-      priority: 120
-      cap: BUTTCAP
-    }
-  }
   element {
     scale: 15
     lines {
