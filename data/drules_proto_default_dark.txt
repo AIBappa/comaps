@@ -27036,15 +27036,6 @@ cont {
       priority: 219
       cap: BUTTCAP
     }
-    lines {
-      width: 0.9
-      dashdot {
-        dd: 3.5
-        dd: 2.7
-      }
-      priority: 220
-      cap: BUTTCAP
-    }
   }
   element {
     scale: 15

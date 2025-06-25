@@ -224,11 +224,11 @@ railway-subway-bridge::dash                         # line::dash z16- (also has 
 === 221
 
 highway-footway-bicycle                             # line z15- (also has line::cycleline z15-, pathtext z15-)
-highway-path-bicycle                                # line z14- (also has line::cycleline z14-, pathtext z15-)
+highway-path-bicycle                                # line z15- (also has line::cycleline z14-, pathtext z15-)
 === 220
 
 highway-footway-bicycle::cycleline                  # line::cycleline z15- (also has line z15-, pathtext z15-)
-highway-path-bicycle::cycleline                     # line::cycleline z14- (also has line z14-, pathtext z15-)
+highway-path-bicycle::cycleline                     # line::cycleline z14- (also has line z15-, pathtext z15-)
 === 219
 
 highway-cycleway                                    # line z13- (also has pathtext z15-)

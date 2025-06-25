@@ -29019,15 +29019,6 @@ cont {
       priority: 219
       cap: BUTTCAP
     }
-    lines {
-      width: 0.9
-      dashdot {
-        dd: 3.5
-        dd: 2.7
-      }
-      priority: 220
-      cap: BUTTCAP
-    }
   }
   element {
     scale: 12
@@ -29035,15 +29026,6 @@ cont {
       width: 0.5
       color: 9145087
       priority: 219
-      cap: BUTTCAP
-    }
-    lines {
-      width: 0.9
-      dashdot {
-        dd: 3.5
-        dd: 2.7
-      }
-      priority: 220
       cap: BUTTCAP
     }
   }
@@ -29055,15 +29037,6 @@ cont {
       priority: 219
       cap: BUTTCAP
     }
-    lines {
-      width: 0.9
-      dashdot {
-        dd: 3.5
-        dd: 2.7
-      }
-      priority: 220
-      cap: BUTTCAP
-    }
   }
   element {
     scale: 14
@@ -29071,15 +29044,6 @@ cont {
       width: 0.5
       color: 9145087
       priority: 219
-      cap: BUTTCAP
-    }
-    lines {
-      width: 0.9
-      dashdot {
-        dd: 3.5
-        dd: 2.7
-      }
-      priority: 220
       cap: BUTTCAP
     }
   }
