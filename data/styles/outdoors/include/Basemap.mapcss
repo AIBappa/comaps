@@ -11,7 +11,7 @@ line|z12-[waterway=stream],
 line|z13-[waterway=fish_pass],
 line|z15-[waterway=ditch],
 line|z15-[waterway=drain],
-{opacity: 1; color: @river;}
+{opacity: 1; color: @water;}
 
 /* 6.2 Line water(river,canal etc.) */
 
@@ -78,7 +78,7 @@ area|z13-[tourism=camp_site],
 
 
 line|z13-[man_made=cutline],
-{width: 1.7; color: @green0; opacity: 0.6;}
+{width: 1.7; color: @grass;}
 line|z14[man_made=cutline],
 {width: 2.2;}
 line|z15[man_made=cutline],
