@@ -17,7 +17,7 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
@@ -129,7 +129,7 @@ public class ChartController implements OnChartValueSelectedListener,
     x.setPosition(XAxis.XAxisPosition.BOTTOM);
     x.setAxisLineColor(ThemeUtils.getColor(mContext, androidx.appcompat.R.attr.dividerHorizontal));
     x.setAxisLineWidth(mContext.getResources().getDimensionPixelSize(R.dimen.divider_height));
-    ValueFormatter xAxisFormatter = new AxisValueFormatter(mChart);
+    IAxisValueFormatter xAxisFormatter = new AxisValueFormatter(mChart);
     x.setValueFormatter(xAxisFormatter);
 
     YAxis y = mChart.getAxisLeft();
