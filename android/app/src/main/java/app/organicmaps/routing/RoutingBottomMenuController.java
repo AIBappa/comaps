@@ -17,10 +17,7 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.text.style.TypefaceSpan;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
@@ -28,6 +25,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -64,17 +62,17 @@ final class RoutingBottomMenuController implements View.OnClickListener
   @NonNull
   private final View mTransitFrame;
   @NonNull
-  private final TextView mError;
+  private final MaterialTextView mError;
   @NonNull
-  private final Button mStart;
+  private final MaterialButton mStart;
   @NonNull
-  private final ImageView mAltitudeChart;
+  private final ShapeableImageView mAltitudeChart;
   @NonNull
   private final MaterialTextView mTime;
   @NonNull
   private final MaterialTextView mAltitudeDifference;
   @NonNull
-  private final TextView mTimeVehicle;
+  private final MaterialTextView mTimeVehicle;
   @Nullable
   private final MaterialTextView mArrival;
   @NonNull
@@ -98,11 +96,11 @@ final class RoutingBottomMenuController implements View.OnClickListener
     View altitudeChartFrame = getViewById(activity, frame, R.id.altitude_chart_panel);
     View timeElevationLine = getViewById(activity, frame, R.id.time_elevation_line);
     View transitFrame = getViewById(activity, frame, R.id.transit_panel);
-    TextView error = (TextView) getViewById(activity, frame, R.id.error);
-    Button start = (Button) getViewById(activity, frame, R.id.start);
-    ImageView altitudeChart = (ImageView) getViewById(activity, frame, R.id.altitude_chart);
+    MaterialTextView error = (MaterialTextView) getViewById(activity, frame, R.id.error);
+    MaterialButton start = (MaterialButton) getViewById(activity, frame, R.id.start);
+    ShapeableImageView altitudeChart = (ShapeableImageView) getViewById(activity, frame, R.id.altitude_chart);
     MaterialTextView time = (MaterialTextView) getViewById(activity, frame, R.id.time);
-    TextView timeVehicle = (TextView) getViewById(activity, frame, R.id.time_vehicle);
+    MaterialTextView timeVehicle = (MaterialTextView) getViewById(activity, frame, R.id.time_vehicle);
     MaterialTextView altitudeDifference = (MaterialTextView) getViewById(activity, frame, R.id.altitude_difference);
     MaterialTextView arrival = (MaterialTextView) getViewById(activity, frame, R.id.arrival);
     View actionFrame = getViewById(activity, frame, R.id.routing_action_frame);
@@ -124,12 +122,12 @@ final class RoutingBottomMenuController implements View.OnClickListener
                                       @NonNull View altitudeChartFrame,
                                       @NonNull View timeElevationLine,
                                       @NonNull View transitFrame,
-                                      @NonNull TextView error,
-                                      @NonNull Button start,
-                                      @NonNull ImageView altitudeChart,
+                                      @NonNull MaterialTextView error,
+                                      @NonNull MaterialButton start,
+                                      @NonNull ShapeableImageView altitudeChart,
                                       @NonNull MaterialTextView time,
                                       @NonNull MaterialTextView altitudeDifference,
-                                      @NonNull TextView timeVehicle,
+                                      @NonNull MaterialTextView timeVehicle,
                                       @Nullable MaterialTextView arrival,
                                       @NonNull View actionFrame,
                                       @Nullable RoutingBottomMenuListener listener)
@@ -159,10 +157,10 @@ final class RoutingBottomMenuController implements View.OnClickListener
     Resources res = mContext.getResources();
     mTransitViewDecorator = new DotDividerItemDecoration(dividerDrawable, res.getDimensionPixelSize(R.dimen.margin_base),
                                                          res.getDimensionPixelSize(R.dimen.margin_half));
-    Button manageRouteButton = altitudeChartFrame.findViewById(R.id.btn__manage_route);
+    MaterialButton manageRouteButton = altitudeChartFrame.findViewById(R.id.btn__manage_route);
     manageRouteButton.setOnClickListener(this);
 
-    Button saveButton = altitudeChartFrame.findViewById(R.id.btn__save);
+    MaterialButton saveButton = altitudeChartFrame.findViewById(R.id.btn__save);
     saveButton.setOnClickListener(this);
   }
 
@@ -174,7 +172,7 @@ final class RoutingBottomMenuController implements View.OnClickListener
       showRouteAltitudeChart();
     showRoutingDetails();
     UiUtils.show(mAltitudeChartFrame);
-    Button saveButton = mAltitudeChartFrame.findViewById(R.id.btn__save);
+    MaterialButton saveButton = mAltitudeChartFrame.findViewById(R.id.btn__save);
     saveButton.setText(R.string.save);
     saveButton.setEnabled(true);
   }
@@ -234,7 +232,7 @@ final class RoutingBottomMenuController implements View.OnClickListener
     else
       UiUtils.hide(rv); // Show only distance between start and finish
 
-    TextView totalTimeView = mTransitFrame.findViewById(R.id.total_time);
+    MaterialTextView totalTimeView = mTransitFrame.findViewById(R.id.total_time);
     totalTimeView.setText(mContext.getString(R.string.placepage_distance) + ": " +
                           totalLength.mDistanceStr + " " + totalLength.getUnitsStr(mContext));
 
@@ -505,7 +503,7 @@ final class RoutingBottomMenuController implements View.OnClickListener
     else if (id == R.id.btn__save)
     {
       Framework.nativeSaveRoute();
-      Button saveButton = v.findViewById(R.id.btn__save);
+      MaterialButton saveButton = v.findViewById(R.id.btn__save);
       saveButton.setEnabled(false);
       saveButton.setText(R.string.saved);
     }

@@ -3,9 +3,6 @@ package app.organicmaps.widget.menu;
 import android.location.Location;
 import android.util.Pair;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +18,11 @@ import app.organicmaps.util.Graphics;
 import app.organicmaps.sdk.util.StringUtils;
 import app.organicmaps.util.ThemeUtils;
 import app.organicmaps.sdk.util.UiUtils;
+
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -33,17 +34,17 @@ public class NavMenu
   private final View mBottomSheetBackground;
   private final View mHeaderFrame;
 
-  private final ImageView mTts;
+  private final ShapeableImageView mTts;
   private final View mSpeedViewContainer;
-  private final TextView mSpeedValue;
-  private final TextView mSpeedUnits;
-  private final TextView mTimeHourValue;
-  private final TextView mTimeHourUnits;
-  private final TextView mTimeMinuteValue;
-  private final TextView mTimeMinuteUnits;
-  private final TextView mTimeEstimate;
-  private final TextView mDistanceValue;
-  private final TextView mDistanceUnits;
+  private final MaterialTextView mSpeedValue;
+  private final MaterialTextView mSpeedUnits;
+  private final MaterialTextView mTimeHourValue;
+  private final MaterialTextView mTimeHourUnits;
+  private final MaterialTextView mTimeMinuteValue;
+  private final MaterialTextView mTimeMinuteUnits;
+  private final MaterialTextView mTimeEstimate;
+  private final MaterialTextView mDistanceValue;
+  private final MaterialTextView mDistanceUnits;
   private final LinearProgressIndicator mRouteProgress;
 
   private final AppCompatActivity mActivity;
@@ -109,11 +110,11 @@ public class NavMenu
     mRouteProgress = bottomFrame.findViewById(R.id.navigation_progress);
 
     // Bottom frame buttons
-    ImageView mSettings = bottomFrame.findViewById(R.id.settings);
+    ShapeableImageView mSettings = bottomFrame.findViewById(R.id.settings);
     mSettings.setOnClickListener(v -> onSettingsClicked());
     mTts = bottomFrame.findViewById(R.id.tts_volume);
     mTts.setOnClickListener(v -> onTtsClicked());
-    Button stop = bottomFrame.findViewById(R.id.stop);
+    MaterialButton stop = bottomFrame.findViewById(R.id.stop);
     stop.setOnClickListener(v -> onStopClicked());
     UiUtils.updateRedButton(stop);
   }

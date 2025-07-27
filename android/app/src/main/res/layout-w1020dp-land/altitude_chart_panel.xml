@@ -55,7 +55,7 @@
       android:layout_marginEnd="@dimen/margin_base"
       android:layout_gravity="top" >
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
           android:id="@+id/time_vehicle"
           android:layout_height="wrap_content"
           android:layout_width="match_parent"

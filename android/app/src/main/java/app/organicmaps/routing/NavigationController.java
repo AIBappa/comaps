@@ -3,8 +3,6 @@ package app.organicmaps.routing;
 import android.location.Location;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,21 +27,23 @@ import app.organicmaps.widget.LanesView;
 import app.organicmaps.widget.SpeedLimitView;
 import app.organicmaps.widget.menu.NavMenu;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.android.material.textview.MaterialTextView;
 
 public class NavigationController implements TrafficManager.TrafficCallback,
                                              NavMenu.NavMenuListener
 {
   private final View mFrame;
 
-  private final ImageView mNextTurnImage;
-  private final TextView mNextTurnDistance;
-  private final TextView mCircleExit;
+  private final ShapeableImageView mNextTurnImage;
+  private final MaterialTextView mNextTurnDistance;
+  private final MaterialTextView mCircleExit;
 
   private final View mNextNextTurnFrame;
-  private final ImageView mNextNextTurnImage;
+  private final ShapeableImageView mNextNextTurnImage;
 
   private final View mStreetFrame;
-  private final TextView mNextStreet;
+  private final MaterialTextView mNextStreet;
 
   @NonNull
   private final LanesView mLanesView;
