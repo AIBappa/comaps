@@ -1,1 +1,0 @@
-comaps,maps,open street maps,osm,matkaile,patikoi,pyöräile,aja,offline,tietosuoja,navigoi,gps
