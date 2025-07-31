@@ -65,27 +65,7 @@ set(SRC
   utm_mgrs_utils.hpp
 )
 
-if (PLATFORM_IPHONE)
-  append(SRC
-    background_downloader_ios.h
-    background_downloader_ios.mm
-    gui_thread_apple.mm
-    http_thread_apple.h
-    http_thread_apple.mm
-    http_client_apple.mm
-    http_uploader_apple.mm
-    http_user_agent_ios.mm
-    localization.mm
-    locale.mm
-    network_policy_ios.h
-    network_policy_ios.mm
-    platform_ios.mm
-    platform_unix_impl.cpp
-    platform_unix_impl.hpp
-    secure_storage_ios.mm
-    socket_apple.mm
-  )
-elseif(${PLATFORM_ANDROID})
+if (PLATFORM_ANDROID)
   append(SRC
     http_uploader_background_dummy.cpp
     http_uploader_dummy.cpp
@@ -98,29 +78,19 @@ elseif(${PLATFORM_ANDROID})
     trace_android.cpp
   )
 else()
-  message(FATAL_ERROR "Unsupported platform. Only iOS and Android are supported.")
+  message(FATAL_ERROR "Unsupported platform. Only Android is supported.")
 endif()
 
 omim_add_library(${PROJECT_NAME} ${SRC})
 
-if (APPLE)
-  target_compile_options(${PROJECT_NAME} PRIVATE -fobjc-arc -Wno-nullability-completeness)
-endif()
-
 target_link_libraries(${PROJECT_NAME}
   geometry  # mercator::YToLat
   coding
-  $<$<BOOL:${PLATFORM_MAC}>:
-    -framework\ Foundation
-    -framework\ SystemConfiguration
-    -framework\ CFNetwork
-    -framework\ Security  # SecPKCS12Import
-    >
 )
 
 omim_add_test_subdirectory(platform_tests_support)
 omim_add_test_subdirectory(platform_tests)
 # Location service subdirectory removed - not needed for Android-only builds
 
-# strings::UniChar clashes with Apple's definition.
+# Skip unity build for preferred_languages.cpp to avoid potential conflicts.
 set_property(SOURCE preferred_languages.cpp PROPERTY SKIP_UNITY_BUILD_INCLUSION ON)
