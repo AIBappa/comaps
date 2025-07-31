@@ -129,24 +129,9 @@ target_sources(${PROJECT_NAME}
     vulkan_program_pool.hpp
 )
 
-if (PLATFORM_IPHONE OR PLATFORM_MAC)
-  target_sources(${PROJECT_NAME}
-    PRIVATE
-      metal_program_params.hpp
-      metal_program_params.mm
-      metal_program_pool.hpp
-      metal_program_pool.mm
-      program_manager_metal.mm
-  )
-endif()
-
 # Do not include glm's CMakeLists.txt, because it's outdated and not necessary.
 target_include_directories(${PROJECT_NAME} PUBLIC "${OMIM_ROOT}/3party/glm")
 
 target_link_libraries(${PROJECT_NAME} drape)
-
-if (PLATFORM_MAC)
-  set_target_properties(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC YES)
-endif()
 
 omim_add_test_subdirectory(shaders_tests)

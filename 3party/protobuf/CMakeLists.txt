@@ -32,9 +32,7 @@ target_include_directories(${PROJECT_NAME}
   PUBLIC protobuf/src
 )
 
-if(NOT PLATFORM_WIN)
-  target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_PTHREAD)
-endif ()
+target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_PTHREAD)
 
 target_compile_options(${PROJECT_NAME} PRIVATE
   $<$<CXX_COMPILER_ID:AppleClang,Clang>:-Wno-shorten-64-to-32>

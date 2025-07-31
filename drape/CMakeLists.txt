@@ -134,45 +134,12 @@ set(DRAPE_TESTABLE_SRC
   vulkan/vulkan_vertex_array_buffer_impl.cpp
 )
 
-if (PLATFORM_IPHONE OR PLATFORM_MAC)
-  append(DRAPE_TESTABLE_SRC
-    metal/metal_base_context.hpp
-    metal/metal_base_context.mm
-    metal/metal_cleaner.hpp
-    metal/metal_cleaner.mm
-    metal/metal_gpu_buffer_impl.mm
-    metal/metal_gpu_program.hpp
-    metal/metal_mesh_object_impl.mm
-    metal/metal_states.hpp
-    metal/metal_states.mm
-    metal/metal_texture.hpp
-    metal/metal_texture.mm
-    metal/metal_vertex_array_buffer_impl.mm
-    metal/render_state_metal.mm
-  )
-endif()
-
 set(SRC ${DRAPE_TESTABLE_SRC} gl_functions.cpp)
-
-if (PLATFORM_IPHONE)
-  append(SRC
-    hw_texture_ios.hpp
-    hw_texture_ios.mm
-  )
-endif()
 
 omim_add_library(${PROJECT_NAME} ${SRC})
 
 # Do not include glm's CMakeLists.txt, because it's outdated and not necessary.
 target_include_directories(${PROJECT_NAME} PUBLIC ${OMIM_ROOT}/3party/glm)
-
-if (PLATFORM_LINUX OR PLATFORM_WIN)
-  find_package(OpenGL)
-endif()
-
-if (PLATFORM_MAC)
-  set_target_properties(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC YES)
-endif()
 
 set(DRAPE_LINK_LIBRARIES
   indexer
@@ -186,10 +153,6 @@ set(DRAPE_LINK_LIBRARIES
   harfbuzz::harfbuzz
   ICU::i18n
   expat::expat
-  $<$<BOOL:${PLATFORM_MAC}>:-framework\ OpenGL>
-  $<$<BOOL:${PLATFORM_MAC}>:-framework\ Metal>
-  $<$<BOOL:${PLATFORM_LINUX}>:OpenGL::GL>
-  $<$<BOOL:${PLATFORM_WIN}>:OpenGL::GL>
 )
 
 target_link_libraries(${PROJECT_NAME} ${DRAPE_LINK_LIBRARIES})

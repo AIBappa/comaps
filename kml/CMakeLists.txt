@@ -31,8 +31,3 @@ omim_add_library(${PROJECT_NAME} ${SRC})
 target_link_libraries(${PROJECT_NAME} indexer)
 
 omim_add_test_subdirectory(kml_tests)
-
-if(PLATFORM_DESKTOP)
-  omim_add_tool_subdirectory(kmb_to_kml)
-  omim_add_tool_subdirectory(kml_to_kmb)
-endif()

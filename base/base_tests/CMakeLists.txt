@@ -47,12 +47,8 @@ set(SRC
   timer_test.cpp
   uni_string_dfa_test.cpp
   visitor_tests.cpp
+  timegm_test.cpp
 )
-
-# Windows does not have timegm function
-if(NOT WIN32)
-  list(APPEND SRC "timegm_test.cpp")
-endif()
 
 omim_add_test(${PROJECT_NAME} ${SRC} NO_PLATFORM_INIT)
 

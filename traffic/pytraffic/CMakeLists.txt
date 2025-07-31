@@ -18,13 +18,6 @@ if (PLATFORM_MAC)
   )
 endif()
 
-if (PLATFORM_WIN OR PLATFORM_LINUX)
-  omim_link_libraries(
-    ${PROJECT_NAME}
-    Qt5::Widgets
-  )
-endif()
-
 omim_link_libraries(
   ${PROJECT_NAME}
   routing

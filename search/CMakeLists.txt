@@ -179,10 +179,5 @@ target_link_libraries(${PROJECT_NAME}
   openlocationcode
 )
 
-if(PLATFORM_DESKTOP)
-  add_subdirectory(search_tests_support)
-  add_subdirectory(search_quality)
-endif()
-
 omim_add_test_subdirectory(search_tests)
 omim_add_test_subdirectory(search_integration_tests)
