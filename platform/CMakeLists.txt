@@ -78,7 +78,17 @@ if (PLATFORM_ANDROID)
     trace_android.cpp
   )
 else()
-  message(FATAL_ERROR "Unsupported platform. Only Android is supported.")
+  # Linux and other Unix-like platforms
+  append(SRC
+    http_uploader_background_dummy.cpp
+    http_uploader_dummy.cpp
+    localization_dummy.cpp
+    network_policy_dummy.cpp
+    platform_unix_impl.cpp
+    platform_unix_impl.hpp
+    secure_storage_dummy.cpp
+    trace_android.cpp  # Use Android trace for now, it should work on Linux too
+  )
 endif()
 
 omim_add_library(${PROJECT_NAME} ${SRC})
