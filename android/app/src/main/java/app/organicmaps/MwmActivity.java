@@ -347,10 +347,10 @@ public class MwmActivity extends BaseMwmFragmentActivity
 
   private void migrateOAuthCredentials()
   {
-    if (OsmOAuth.containsOAuth1Credentials(this))
+    if (OsmOAuth.containsOAuth1Credentials())
     {
       // Remove old OAuth v1 secrets
-      OsmOAuth.clearOAuth1Credentials(this);
+      OsmOAuth.clearOAuth1Credentials();
 
       // Notify user to re-login
       dismissAlertDialog();
@@ -570,7 +570,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
 
     mShareLauncher = SharingUtils.RegisterLauncher(this);
 
-    mDisplayManager = DisplayManager.from(this);
+    mDisplayManager = MwmApplication.from(this).getDisplayManager();
     if (mDisplayManager.isCarDisplayUsed())
     {
       mRemoveDisplayListener = false;
@@ -768,6 +768,16 @@ public class MwmActivity extends BaseMwmFragmentActivity
   private void showPositionChooser(ChoosePositionMode mode, boolean isBusiness, boolean applyPosition)
   {
     closeFloatingToolbarsAndPanels(false);
+    if (mMapFragment != null)
+    {
+      final View mapView = mMapFragment.getView();
+      if (mapView != null)
+      {
+      int width = mapView.getWidth();
+      int height = mapView.getHeight();
+      Framework.nativeSetVisibleRect(0, 0, width, height);
+      }
+    }
     UiUtils.show(mPointChooser);
     mMapButtonsViewModel.setButtonsHidden(true);
     ChoosePositionMode.set(mode, isBusiness, applyPosition);
@@ -780,6 +790,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
     ChoosePositionMode mode = ChoosePositionMode.get();
     ChoosePositionMode.set(ChoosePositionMode.None, false, false);
     mMapButtonsViewModel.setButtonsHidden(false);
+    Framework.nativeDeactivatePopup();
     refreshLightStatusBar();
     if (mode == ChoosePositionMode.Api)
       finish();

@@ -176,7 +176,7 @@ public class SearchFragment extends BaseMwmFragment implements SearchListener, C
 
   private final LocationListener mLocationListener = new LocationListener() {
     @Override
-    public void onLocationUpdated(Location location)
+    public void onLocationUpdated(@NonNull Location location)
     {
       mLastPosition.set(location.getLatitude(), location.getLongitude());
 
@@ -430,6 +430,8 @@ public class SearchFragment extends BaseMwmFragment implements SearchListener, C
 
   void showAllResultsOnMap()
   {
+    SearchEngine.INSTANCE.updateViewportWithLastResults();
+
     // The previous search should be cancelled before the new one is started, since previous search
     // results are no longer needed.
     SearchEngine.INSTANCE.cancel();
@@ -586,7 +588,7 @@ public class SearchFragment extends BaseMwmFragment implements SearchListener, C
     @Override
     void executeInternal()
     {
-      SharedPropertiesUtils.setShouldShowEmulateBadStorageSetting(mContext, true);
+      SharedPropertiesUtils.setShouldShowEmulateBadStorageSetting(true);
     }
   }
 
