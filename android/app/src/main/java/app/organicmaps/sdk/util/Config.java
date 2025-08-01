@@ -11,9 +11,10 @@ import app.organicmaps.util.ThemeUtils;
 
 public final class Config
 {
-  @SuppressWarnings("NotNullFieldNotInitialized")
   @NonNull
-  private static SharedPreferences mPrefs;
+  private static SharedPreferences getPrefs(@NonNull Context context) {
+    return PreferenceManager.getDefaultSharedPreferences(context);
+  }
 
   private static final String KEY_APP_STORAGE = "StoragePath";
 
