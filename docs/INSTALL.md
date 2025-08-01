@@ -24,7 +24,7 @@ Follow the instructions for your OS, and afterwards the repository is prepared t
 ### Linux
 Clone the repository
 ```bash
-git clone --recurse-submodules --shallow-submodules https://codeberg.org/comaps/comaps.git
+git clone --recurse-submodules --shallow-submodules https://github.com/AIBappa/comaps.git
 ```
 
 Go into the cloned repository:
