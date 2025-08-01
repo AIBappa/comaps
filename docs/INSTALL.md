@@ -61,8 +61,7 @@ git config --global core.symlinks true
 
 Clone the repository
 ```bash
-git clone --recurse-submodules --shallow-submodules https://codeberg.org/comaps/comaps.git
-```
+git clone --recurse-submodules --shallow-submodules https://github.com/AIBappa/comaps.git
 
 For _Windows 10_:  You should be able to build the project by following either of these setup methods:
 
