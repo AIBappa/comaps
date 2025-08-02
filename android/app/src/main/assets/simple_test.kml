@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Simple Test Markers</name>
+  <description>Basic test markers without complex extensions</description>
+  
+  <Style id="red-pushpin">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  
+  <Style id="blue-pushpin">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  
+  <Folder>
+    <name>Test Locations</name>
+    <open>1</open>
+    
+    <Placemark>
+      <name>Pune Test Location</name>
+      <description>Simple test marker in Pune</description>
+      <styleUrl>#red-pushpin</styleUrl>
+      <Point>
+        <coordinates>73.8567,18.5204,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>Mumbai Test Location</name>
+      <description>Simple test marker in Mumbai</description>
+      <styleUrl>#blue-pushpin</styleUrl>
+      <Point>
+        <coordinates>72.8777,19.0760,0</coordinates>
+      </Point>
+    </Placemark>
+    
+    <Placemark>
+      <name>Delhi Test Location</name>
+      <description>Simple test marker in Delhi</description>
+      <styleUrl>#red-pushpin</styleUrl>
+      <Point>
+        <coordinates>77.1025,28.7041,0</coordinates>
+      </Point>
+    </Placemark>
+    
+  </Folder>
+</Document>
+</kml>

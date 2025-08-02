@@ -85,6 +85,7 @@
     <string name="bookmarks_and_tracks">Bookmarks and Tracks</string>
     <!-- Import KML button content description -->
     <string name="import_kml">Import KML</string>
+    <string name="simple_direct">Simple Direct</string>
     <!-- Default bookmark list name -->
     <string name="core_my_places">My Places</string>
     <!-- Add bookmark dialog - bookmark name -->
