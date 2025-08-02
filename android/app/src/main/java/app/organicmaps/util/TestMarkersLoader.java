@@ -36,40 +36,73 @@ public class TestMarkersLoader {
     
     public static void loadAndShowTestMarkers(@NonNull Context context) {
         try {
+            Logger.d(TAG, "Starting to load test markers...");
+            
+            // Check if BookmarkManager is available
+            if (BookmarkManager.INSTANCE == null) {
+                Logger.e(TAG, "BookmarkManager.INSTANCE is null!");
+                return;
+            }
+            
+            // Add a small delay to ensure map is fully initialized
+            new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+                loadTestMarkersDelayed(context);
+            }, 500); // 500ms delay
+            
+        } catch (Exception e) {
+            Logger.e(TAG, "Unexpected error starting test markers loading", e);
+        }
+    }
+    
+    private static void loadTestMarkersDelayed(@NonNull Context context) {
+        try {
             String jsonString = loadJsonFromAssets(context, TEST_MARKERS_FILE);
             if (jsonString == null) {
                 Logger.e(TAG, "Failed to load test markers JSON file");
                 return;
             }
             
+            Logger.d(TAG, "Loaded JSON file, parsing...");
             JSONObject jsonObject = new JSONObject(jsonString);
             
             // Create or get Pune category
             BookmarkCategory puneCategory = getOrCreateCategory(PUNE_CATEGORY_NAME);
             if (puneCategory != null) {
+                Logger.d(TAG, "Created/found Pune category with ID: " + puneCategory.getId());
                 JSONArray puneMarkers = jsonObject.getJSONArray("pune_markers");
                 addMarkersToCategory(puneCategory, puneMarkers);
                 Logger.d(TAG, "Added " + puneMarkers.length() + " Pune markers");
+            } else {
+                Logger.e(TAG, "Failed to create/get Pune category");
             }
             
             // Create or get Mumbai category
             BookmarkCategory mumbaiCategory = getOrCreateCategory(MUMBAI_CATEGORY_NAME);
             if (mumbaiCategory != null) {
+                Logger.d(TAG, "Created/found Mumbai category with ID: " + mumbaiCategory.getId());
                 JSONArray mumbaiMarkers = jsonObject.getJSONArray("mumbai_markers");
                 addMarkersToCategory(mumbaiCategory, mumbaiMarkers);
                 Logger.d(TAG, "Added " + mumbaiMarkers.length() + " Mumbai markers");
+            } else {
+                Logger.e(TAG, "Failed to create/get Mumbai category");
             }
             
             // Show all bookmark categories on map
             if (puneCategory != null) {
+                Logger.d(TAG, "Showing Pune category on map");
                 BookmarkManager.INSTANCE.showBookmarkCategoryOnMap(puneCategory.getId());
             }
             if (mumbaiCategory != null) {
+                Logger.d(TAG, "Showing Mumbai category on map");
                 BookmarkManager.INSTANCE.showBookmarkCategoryOnMap(mumbaiCategory.getId());
             }
             
+            Logger.d(TAG, "Test markers loading completed");
+            
         } catch (JSONException e) {
             Logger.e(TAG, "Error parsing test markers JSON", e);
+        } catch (Exception e) {
+            Logger.e(TAG, "Unexpected error loading test markers", e);
         }
     }
     
@@ -109,6 +142,9 @@ public class TestMarkersLoader {
     
     private static void addMarkersToCategory(@NonNull BookmarkCategory category, @NonNull JSONArray markers) {
         try {
+            // Prepare the category for editing (this might set it as the active category)
+            BookmarkManager.INSTANCE.prepareForSearch(category.getId());
+            
             for (int i = 0; i < markers.length(); i++) {
                 JSONObject marker = markers.getJSONObject(i);
                 String name = marker.getString("name");
@@ -119,11 +155,15 @@ public class TestMarkersLoader {
                 // Check if bookmark already exists to avoid duplicates
                 if (!bookmarkExists(category, name, latitude, longitude)) {
                     // Add bookmark using the standard flow
+                    Logger.d(TAG, "Attempting to create bookmark: " + name + " at " + latitude + ", " + longitude);
                     Bookmark bookmark = BookmarkManager.INSTANCE.addNewBookmark(latitude, longitude);
                     
                     if (bookmark != null) {
+                        Logger.d(TAG, "Successfully created bookmark: " + name + " with ID: " + bookmark.getBookmarkId());
+                        
                         // Move bookmark to the desired category if it's not already there
                         if (bookmark.getCategoryId() != category.getId()) {
+                            Logger.d(TAG, "Moving bookmark from category " + bookmark.getCategoryId() + " to " + category.getId());
                             BookmarkManager.INSTANCE.changeBookmarkCategory(
                                 bookmark.getCategoryId(), 
                                 category.getId(), 
@@ -141,7 +181,8 @@ public class TestMarkersLoader {
                         
                         Logger.d(TAG, "Created bookmark: " + name);
                     } else {
-                        Logger.e(TAG, "Failed to create bookmark: " + name);
+                        Logger.e(TAG, "Failed to create bookmark: " + name + " - addNewBookmark returned null");
+                        Logger.e(TAG, "This might indicate that no category is set as 'last edited' or the map engine is not ready");
                     }
                 }
             }
