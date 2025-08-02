@@ -6,4 +6,4 @@
   style="@style/MwmWidget.MapButton.Square"
   app:shapeAppearanceOverlay="@style/MwmWidget.MapButton.Square"
   android:contentDescription="@string/simple_direct"
-  app:srcCompat="@drawable/ic_add" />
+  app:srcCompat="@drawable/ic_add_list" />
