@@ -103,6 +103,30 @@ User Click → Java UI → KMZ Creation → Native Import → Callback → Map D
 
 No missing libraries, no broken references, no compilation errors.
 
+### **✅ Build Fix Applied:**
+- **Added missing `Utils.showToast()` method** to resolve compilation errors
+- **Method signature**: `public static void showToast(@NonNull Activity activity, @NonNull String message)`
+- **Location**: `app/organicmaps/util/Utils.java`
+- **Fix resolves**: 6 compilation errors in MwmActivity.java lines 422, 424, 433, 436, 445, 448
+
+### **🏗️ Bookmark Persistence Architecture Findings:**
+
+**Storage Mechanism: File-Based (NOT SQLite)**
+- **C++ Backend**: `SaveBookmarks()` in `bookmark_manager.cpp` saves to KML files via `SaveKmlFileByExt()`
+- **Storage Location**: `GetBookmarksDirectory()` → `<SettingsDir>/bookmarks/*.kml`
+- **No Database**: Extensive search confirms no SQLite usage in bookmark system
+
+**KMZ File Lifecycle:**
+```
+User KMZ Import → Extract to temp → Process contents → Save as KML files → Delete KMZ
+                                                            ↓
+                                              Permanent storage: /bookmarks/*.kml
+```
+
+- **KMZ files are temporary**: Imported, processed, then discarded via `base::DeleteFileX()`
+- **Persistent storage**: Individual `.kml` files per bookmark category
+- **Deletion flow**: Java `deleteBookmark()` → JNI → C++ `DeleteBookmark()` with file cleanup
+
 The complete flow from button click to bookmark display should work correctly once the Android SDK build environment is properly configured.
 
 **Next Step**: Build and test the three buttons!

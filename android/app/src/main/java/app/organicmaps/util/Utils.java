@@ -128,6 +128,16 @@ public class Utils
       showSnackbarAbove(view, viewAbove, message);
   }
 
+  /**
+   * Show a short toast message.
+   * @param activity The activity context
+   * @param message The message to show
+   */
+  public static void showToast(@NonNull Activity activity, @NonNull String message)
+  {
+    Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
+  }
+
   public static @Nullable Intent makeSystemLocationSettingIntent(@NonNull Context context)
   {
     Intent intent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
