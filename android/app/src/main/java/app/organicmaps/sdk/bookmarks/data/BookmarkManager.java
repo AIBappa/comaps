@@ -297,6 +297,40 @@ public enum BookmarkManager {
   }
 
   @NonNull
+  public List<Bookmark> getBookmarks(long categoryId)
+  {
+    // Find the category to get bookmark count
+    BookmarkCategory category = null;
+    for (BookmarkCategory cat : getCategories())
+    {
+      if (cat.getId() == categoryId)
+      {
+        category = cat;
+        break;
+      }
+    }
+    
+    if (category == null)
+      return Collections.emptyList();
+    
+    List<Bookmark> bookmarks = new ArrayList<>();
+    int bookmarkCount = category.getBookmarksCount();
+    
+    for (int i = 0; i < bookmarkCount; i++)
+    {
+      long bookmarkId = getBookmarkIdByPosition(categoryId, i);
+      if (bookmarkId > 0) // Assuming valid bookmark IDs are positive
+      {
+        Bookmark bookmark = updateBookmarkPlacePage(bookmarkId);
+        if (bookmark != null)
+          bookmarks.add(bookmark);
+      }
+    }
+    
+    return bookmarks;
+  }
+
+  @NonNull
   public Track getTrack(long trackId)
   {
     return nativeGetTrack(trackId, Track.class);

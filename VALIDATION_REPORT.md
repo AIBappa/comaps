@@ -178,13 +178,22 @@ The complete flow from button click to bookmark display should work correctly on
 
 ### **✅ ALL CRITICAL FIXES VERIFIED:**
 
-1. **TestMarkersLoader.java** - Line 333 ✅
+1. **BookmarkManager.java** - Added missing method ✅
+   ```java
+   // ADDED: Missing getBookmarks(long categoryId) method to BookmarkManager
+   @NonNull
+   public List<Bookmark> getBookmarks(long categoryId) {
+     // Implementation using getBookmarkIdByPosition + updateBookmarkPlacePage
+   }
+   ```
+
+2. **TestMarkersLoader.java** - Line 333 ✅
    ```java
    // FIXED: category.getBookmarks() → BookmarkManager.INSTANCE.getBookmarks(category.getId())
    List<Bookmark> bookmarks = BookmarkManager.INSTANCE.getBookmarks(category.getId());
    ```
 
-2. **Utils.java** - Lines 136-140 ✅
+3. **Utils.java** - Lines 136-140 ✅
    ```java
    public static void showToast(@NonNull Activity activity, @NonNull String message)
    {
@@ -192,7 +201,7 @@ The complete flow from button click to bookmark display should work correctly on
    }
    ```
 
-3. **MwmActivity.java** - 6 locations ✅
+4. **MwmActivity.java** - 6 locations ✅
    ```java
    import app.organicmaps.util.Utils;  // ✅ Correct import
    Utils.showToast(this, "message");   // ✅ Correct usage (6 places)
