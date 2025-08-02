@@ -11,6 +11,7 @@ import app.organicmaps.util.ThemeUtils;
 
 public final class Config
 {
+  private static SharedPreferences mPrefs;
   @NonNull
   private static SharedPreferences getPrefs(@NonNull Context context) {
     return PreferenceManager.getDefaultSharedPreferences(context);
