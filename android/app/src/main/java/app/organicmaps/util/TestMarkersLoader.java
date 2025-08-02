@@ -123,7 +123,7 @@ public class TestMarkersLoader {
         }
     }
     
-    private static void loadKMLFile(@NonNull Context context) {
+    public static void loadKMLFile(@NonNull Context context) {
         try {
             Logger.d(TAG, "=== ATTEMPTING KML IMPORT ===");
             

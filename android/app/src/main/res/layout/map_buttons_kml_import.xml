@@ -6,4 +6,4 @@
   android:background="@drawable/map_button_shape"
   android:contentDescription="@string/import_kml"
   android:scaleType="centerInside"
-  android:src="@drawable/ic_folder_open" />
+  android:src="@drawable/ic_downloader_update" />
