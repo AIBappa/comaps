@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Project only name, app_name is added to strings in build.gradle & can contain "Debug" etc. prefixes. -->
-    <string name="project_name" translatable="false">CoMaps</string>
-    <string name="app_site_url">https://comaps.app/</string>
+    <string name="project_name" translatable="false">KrishiKraft</string>
+    <string name="app_site_url">https://krishikraft.app/</string>
     <!-- SECTION: Strings -->
     <!-- Button text (should be short) -->
     <string name="back">Back</string>
@@ -42,7 +42,7 @@
     <string name="country_status_download_failed">Download has failed</string>
     <!-- Button text for the button under the country_status_download_failed message -->
     <string name="try_again">Try Again</string>
-    <string name="about_menu_title">About CoMaps</string>
+    <string name="about_menu_title">About KrishiKraft</string>
     <!-- Text in About screen -->
     <string name="about_headline">Open project powered by the community</string>
     <!-- Text in About screen -->
@@ -59,7 +59,7 @@
     <string name="unsupported_phone">The app requires hardware accelerated OpenGL. Unfortunately, your device is not supported.</string>
     <string name="download">Download</string>
     <!-- Used in DownloadResources startup screen -->
-    <string name="disconnect_usb_cable">Please disconnect USB cable or insert memory card to use CoMaps</string>
+    <string name="disconnect_usb_cable">Please disconnect USB cable or insert memory card to use KrishiKraft</string>
     <!-- Used in DownloadResources startup screen -->
     <string name="not_enough_free_space_on_sdcard">Please free up some space on the SD card/USB storage first in order to use the app</string>
     <string name="download_resources">Before you start using the app, please download the world overview map to your device.
@@ -173,7 +173,7 @@
     <!-- Notes field in Bookmarks view -->
     <string name="description">Notes</string>
     <!-- Email Subject when sharing bookmark list -->
-    <string name="share_bookmarks_email_subject">CoMaps bookmarks were shared with you</string>
+    <string name="share_bookmarks_email_subject">KrishiKraft bookmarks were shared with you</string>
     <string name="share_bookmarks_email_body">Hello!
 \n
 \nAttached are my bookmarks; please open them in CoMaps. If you don\'t have it installed you can download it here: https://www.comaps.app/download/
@@ -201,11 +201,11 @@
     <!-- Alert message that downloading is in progress. -->
     <string name="downloading_is_active">Map download is in progress now</string>
     <!-- Share my position using SMS, %1$@ contains om:// and %2$@ https://comaps.app link WITHOUT NAME. @NOTE non-ascii symbols in the link will result in max 70 characters SMS instead of 140. -->
-    <string name="my_position_share_sms">Check out my current location in CoMaps! %1$s or %2$s Don\'t have offline maps? Download here: https://www.comaps.app/download/</string>
+    <string name="my_position_share_sms">Check out my current location in KrishiKraft! %1$s or %2$s Don\'t have offline maps? Download here: https://www.krishikraft.app/download/</string>
     <!-- Subject for emailed bookmark -->
-    <string name="bookmark_share_email_subject">Hey, check out my pin in CoMaps!</string>
+    <string name="bookmark_share_email_subject">Hey, check out my pin in KrishiKraft!</string>
     <!-- Subject for emailed position -->
-    <string name="my_position_share_email_subject">Hey, check out my current location on the CoMaps map!</string>
+    <string name="my_position_share_email_subject">Hey, check out my current location on the KrishiKraft map!</string>
     <!-- Share my position using EMail, %1$@ is om:// and %2$@ is https://comaps.app link WITHOUT NAME -->
     <string name="my_position_share_email">Hi,
 \n

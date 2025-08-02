@@ -416,7 +416,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
 
   private void showBookmarks()
   {
-        // Load and show test markers on map instead of opening bookmarks activity
+        // Load and show test markers from local JSON file
     app.organicmaps.util.TestMarkersLoader.loadAndShowTestMarkers(this);
   }
 
