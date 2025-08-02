@@ -1,0 +1,246 @@
+{
+  "pune_markers": [
+    {
+      "name": "Shaniwar Wada",
+      "description": "Historic fortified palace",
+      "latitude": 18.5196,
+      "longitude": 73.8553
+    },
+    {
+      "name": "Aga Khan Palace",
+      "description": "Historical palace and museum",
+      "latitude": 18.5679,
+      "longitude": 73.9143
+    },
+    {
+      "name": "Sinhagad Fort",
+      "description": "Ancient hill fortress",
+      "latitude": 18.3664,
+      "longitude": 73.7562
+    },
+    {
+      "name": "Pune University",
+      "description": "Premier educational institution",
+      "latitude": 18.5089,
+      "longitude": 73.8077
+    },
+    {
+      "name": "Osho Ashram",
+      "description": "Meditation and spiritual center",
+      "latitude": 18.5362,
+      "longitude": 73.8958
+    },
+    {
+      "name": "Lal Mahal",
+      "description": "Historic red palace",
+      "latitude": 18.5158,
+      "longitude": 73.8567
+    },
+    {
+      "name": "Raja Dinkar Kelkar Museum",
+      "description": "Art and cultural museum",
+      "latitude": 18.5158,
+      "longitude": 73.8567
+    },
+    {
+      "name": "Dagdusheth Halwai Ganpati Temple",
+      "description": "Famous Ganesh temple",
+      "latitude": 18.5158,
+      "longitude": 73.8567
+    },
+    {
+      "name": "Pune Central Mall",
+      "description": "Shopping and entertainment",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    {
+      "name": "Koregaon Park",
+      "description": "Upscale residential area",
+      "latitude": 18.5362,
+      "longitude": 73.8958
+    },
+    {
+      "name": "Bund Garden",
+      "description": "Riverside garden park",
+      "latitude": 18.5314,
+      "longitude": 73.8803
+    },
+    {
+      "name": "Fergusson College",
+      "description": "Historic educational institution",
+      "latitude": 18.5089,
+      "longitude": 73.8077
+    },
+    {
+      "name": "Pune Railway Station",
+      "description": "Main railway junction",
+      "latitude": 18.5314,
+      "longitude": 73.8803
+    },
+    {
+      "name": "Phoenix MarketCity",
+      "description": "Large shopping mall",
+      "latitude": 18.5679,
+      "longitude": 73.9143
+    },
+    {
+      "name": "Katraj Snake Park",
+      "description": "Zoo and snake park",
+      "latitude": 18.4386,
+      "longitude": 73.8553
+    },
+    {
+      "name": "Parvati Hill",
+      "description": "Historic hilltop temple",
+      "latitude": 18.5089,
+      "longitude": 73.8553
+    },
+    {
+      "name": "Pune Airport",
+      "description": "Domestic and international airport",
+      "latitude": 18.5821,
+      "longitude": 73.9197
+    },
+    {
+      "name": "Symbiosis International University",
+      "description": "Private university campus",
+      "latitude": 18.5089,
+      "longitude": 73.8077
+    },
+    {
+      "name": "Rajiv Gandhi IT Park",
+      "description": "Technology and business hub",
+      "latitude": 18.5679,
+      "longitude": 73.9143
+    },
+    {
+      "name": "Pune Cricket Stadium",
+      "description": "International cricket venue",
+      "latitude": 18.5314,
+      "longitude": 73.8803
+    }
+  ],
+  "mumbai_markers": [
+    {
+      "name": "Gateway of India",
+      "description": "Iconic monument and tourist attraction",
+      "latitude": 18.9220,
+      "longitude": 72.8347
+    },
+    {
+      "name": "Marine Drive",
+      "description": "Famous waterfront promenade",
+      "latitude": 18.9434,
+      "longitude": 72.8234
+    },
+    {
+      "name": "Chhatrapati Shivaji Terminus",
+      "description": "Historic railway station",
+      "latitude": 18.9401,
+      "longitude": 72.8352
+    },
+    {
+      "name": "Elephanta Caves",
+      "description": "Ancient rock-cut caves",
+      "latitude": 18.9633,
+      "longitude": 72.9315
+    },
+    {
+      "name": "Juhu Beach",
+      "description": "Popular beach destination",
+      "latitude": 19.0990,
+      "longitude": 72.8265
+    },
+    {
+      "name": "Bollywood Studios",
+      "description": "Film city and studios",
+      "latitude": 19.1646,
+      "longitude": 72.8493
+    },
+    {
+      "name": "Haji Ali Dargah",
+      "description": "Famous mosque and tomb",
+      "latitude": 18.9826,
+      "longitude": 72.8093
+    },
+    {
+      "name": "Crawford Market",
+      "description": "Historic wholesale market",
+      "latitude": 18.9401,
+      "longitude": 72.8352
+    },
+    {
+      "name": "Bandra-Worli Sea Link",
+      "description": "Cable-stayed bridge",
+      "latitude": 19.0368,
+      "longitude": 72.8119
+    },
+    {
+      "name": "Siddhivinayak Temple",
+      "description": "Famous Ganesh temple",
+      "latitude": 19.0168,
+      "longitude": 72.8310
+    },
+    {
+      "name": "Colaba Causeway",
+      "description": "Shopping street and market",
+      "latitude": 18.9220,
+      "longitude": 72.8347
+    },
+    {
+      "name": "Hanging Gardens",
+      "description": "Terraced gardens on hilltop",
+      "latitude": 18.9562,
+      "longitude": 72.8081
+    },
+    {
+      "name": "Mumbai Central Station",
+      "description": "Major railway terminus",
+      "latitude": 18.9690,
+      "longitude": 72.8205
+    },
+    {
+      "name": "Nariman Point",
+      "description": "Business district",
+      "latitude": 18.9254,
+      "longitude": 72.8243
+    },
+    {
+      "name": "Powai Lake",
+      "description": "Artificial lake and recreation area",
+      "latitude": 19.1197,
+      "longitude": 72.9059
+    },
+    {
+      "name": "Sanjay Gandhi National Park",
+      "description": "Large national park",
+      "latitude": 19.2147,
+      "longitude": 72.9101
+    },
+    {
+      "name": "Mumbai Airport",
+      "description": "International airport",
+      "latitude": 19.0896,
+      "longitude": 72.8656
+    },
+    {
+      "name": "Worli Sea Face",
+      "description": "Waterfront promenade",
+      "latitude": 19.0368,
+      "longitude": 72.8119
+    },
+    {
+      "name": "Mahalaxmi Temple",
+      "description": "Ancient Hindu temple",
+      "latitude": 18.9826,
+      "longitude": 72.8093
+    },
+    {
+      "name": "Antilia Building",
+      "description": "Famous residential skyscraper",
+      "latitude": 18.9704,
+      "longitude": 72.8081
+    }
+  ]
+}

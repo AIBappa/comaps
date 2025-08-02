@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+<Document>
+  <Style id="placemark-red">
+    <IconStyle>
+      <Icon>
+        <href>https://comaps.at/placemarks/placemark-red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="placemark-blue">
+    <IconStyle>
+      <Icon>
+        <href>https://comaps.at/placemarks/placemark-blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="placemark-green">
+    <IconStyle>
+      <Icon>
+        <href>https://comaps.at/placemarks/placemark-green.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="placemark-orange">
+    <IconStyle>
+      <Icon>
+        <href>https://comaps.at/placemarks/placemark-orange.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <name>Test Markers</name>
+  <visibility>1</visibility>
+  <ExtendedData xmlns:mwm="https://comaps.app">
+    <mwm:name>
+      <mwm:lang code="default">Test Markers</mwm:lang>
+    </mwm:name>
+    <mwm:annotation>Converted from test_markers.json</mwm:annotation>
+    <mwm:description>Pune and Mumbai test locations</mwm:description>
+    <mwm:lastModified>2025-08-02T18:30:00Z</mwm:lastModified>
+    <mwm:accessRules>Local</mwm:accessRules>
+  </ExtendedData>
+  
+  <!-- Pune Places Folder -->
+  <Folder>
+    <name>Pune Places</name>
+    <visibility>1</visibility>
+    
+    <Placemark>
+      <name>Shaniwar Wada</name>
+      <description>Historic fortified palace</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>73.8553,18.5196,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Shaniwar Wada</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-attraction</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Aga Khan Palace</name>
+      <description>Historical palace and museum</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>73.9143,18.5679,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Aga Khan Palace</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-museum</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Sinhagad Fort</name>
+      <description>Ancient hill fortress</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>73.7562,18.3664,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Sinhagad Fort</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>historic-castle</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Pune University</name>
+      <description>Premier educational institution</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>73.8077,18.5089,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Pune University</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-university</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Osho Ashram</name>
+      <description>Meditation and spiritual center</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-orange</styleUrl>
+      <Point><coordinates>73.8958,18.5362,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Osho Ashram</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-place_of_worship</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Lal Mahal</name>
+      <description>Historic red palace</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>73.8567,18.5158,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Lal Mahal</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-attraction</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Raja Dinkar Kelkar Museum</name>
+      <description>Art and cultural museum</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>73.8567,18.5158,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Raja Dinkar Kelkar Museum</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-museum</mwm:value></mwm:featureTypes>
+        <mwm:scale>17</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Dagdusheth Halwai Ganpati Temple</name>
+      <description>Famous Ganesh temple</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-orange</styleUrl>
+      <Point><coordinates>73.8567,18.5158,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Dagdusheth Halwai Ganpati Temple</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-place_of_worship</mwm:value></mwm:featureTypes>
+        <mwm:scale>17</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Pune Central Mall</name>
+      <description>Shopping and entertainment</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>73.8567,18.5204,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Pune Central Mall</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>shop-mall</mwm:value></mwm:featureTypes>
+        <mwm:scale>17</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Koregaon Park</name>
+      <description>Upscale residential area</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>73.8958,18.5362,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Koregaon Park</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>leisure-park</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Bund Garden</name>
+      <description>Riverside garden park</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>73.8803,18.5314,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Bund Garden</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>leisure-park</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Fergusson College</name>
+      <description>Historic educational institution</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>73.8077,18.5089,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Fergusson College</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-college</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Pune Railway Station</name>
+      <description>Main railway junction</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>73.8803,18.5314,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Pune Railway Station</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>railway-station</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Transport</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Phoenix MarketCity</name>
+      <description>Large shopping mall</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>73.9143,18.5679,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Phoenix MarketCity</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>shop-mall</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Katraj Snake Park</name>
+      <description>Zoo and snake park</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>73.8553,18.4386,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Katraj Snake Park</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-zoo</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Parvati Hill</name>
+      <description>Historic hilltop temple</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-orange</styleUrl>
+      <Point><coordinates>73.8553,18.5089,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Parvati Hill</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-place_of_worship</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Pune Airport</name>
+      <description>Domestic and international airport</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>73.9197,18.5821,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Pune Airport</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>aeroway-aerodrome</mwm:value></mwm:featureTypes>
+        <mwm:scale>14</mwm:scale>
+        <mwm:icon>Transport</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Symbiosis International University</name>
+      <description>Private university campus</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>73.8077,18.5089,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Symbiosis International University</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-university</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Rajiv Gandhi IT Park</name>
+      <description>Technology and business hub</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>73.9143,18.5679,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Rajiv Gandhi IT Park</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>office</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Pune Cricket Stadium</name>
+      <description>International cricket venue</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>73.8803,18.5314,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Pune Cricket Stadium</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>leisure-stadium</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Sport</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+  </Folder>
+  
+  <!-- Mumbai Places Folder -->
+  <Folder>
+    <name>Mumbai Places</name>
+    <visibility>1</visibility>
+    
+    <Placemark>
+      <name>Gateway of India</name>
+      <description>Iconic monument and tourist attraction</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>72.8347,18.9220,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Gateway of India</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-attraction</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Marine Drive</name>
+      <description>Famous waterfront promenade</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8234,18.9434,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Marine Drive</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>highway-pedestrian</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Chhatrapati Shivaji Terminus</name>
+      <description>Historic railway station</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>72.8352,18.9401,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Chhatrapati Shivaji Terminus</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>railway-station</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Transport</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Elephanta Caves</name>
+      <description>Ancient rock-cut caves</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-orange</styleUrl>
+      <Point><coordinates>72.9315,18.9633,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Elephanta Caves</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-attraction</mwm:value></mwm:featureTypes>
+        <mwm:scale>14</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Juhu Beach</name>
+      <description>Popular beach destination</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8265,19.0990,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Juhu Beach</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>natural-beach</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Bollywood Studios</name>
+      <description>Film city and studios</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>72.8493,19.1646,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Bollywood Studios</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>tourism-attraction</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Haji Ali Dargah</name>
+      <description>Famous mosque and tomb</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-orange</styleUrl>
+      <Point><coordinates>72.8093,18.9826,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Haji Ali Dargah</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-place_of_worship</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Crawford Market</name>
+      <description>Historic wholesale market</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8352,18.9401,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Crawford Market</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>shop-marketplace</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Bandra-Worli Sea Link</name>
+      <description>Cable-stayed bridge</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8119,19.0368,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Bandra-Worli Sea Link</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>man_made-bridge</mwm:value></mwm:featureTypes>
+        <mwm:scale>14</mwm:scale>
+        <mwm:icon>Transport</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Siddhivinayak Temple</name>
+      <description>Famous Ganesh temple</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-orange</styleUrl>
+      <Point><coordinates>72.8310,19.0168,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Siddhivinayak Temple</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-place_of_worship</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Colaba Causeway</name>
+      <description>Shopping street and market</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8347,18.9220,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Colaba Causeway</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>shop-marketplace</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Hanging Gardens</name>
+      <description>Terraced gardens on hilltop</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>72.8081,18.9562,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Hanging Gardens</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>leisure-park</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Mumbai Central Station</name>
+      <description>Major railway terminus</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8205,18.9690,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Mumbai Central Station</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>railway-station</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Transport</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Nariman Point</name>
+      <description>Business district</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8243,18.9254,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Nariman Point</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>office</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Powai Lake</name>
+      <description>Artificial lake and recreation area</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.9059,19.1197,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Powai Lake</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>natural-water</mwm:value></mwm:featureTypes>
+        <mwm:scale>15</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Sanjay Gandhi National Park</name>
+      <description>Large national park</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-green</styleUrl>
+      <Point><coordinates>72.9101,19.2147,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Sanjay Gandhi National Park</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>leisure-park</mwm:value></mwm:featureTypes>
+        <mwm:scale>13</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Mumbai Airport</name>
+      <description>International airport</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8656,19.0896,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Mumbai Airport</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>aeroway-aerodrome</mwm:value></mwm:featureTypes>
+        <mwm:scale>13</mwm:scale>
+        <mwm:icon>Transport</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Worli Sea Face</name>
+      <description>Waterfront promenade</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-blue</styleUrl>
+      <Point><coordinates>72.8119,19.0368,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Worli Sea Face</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>highway-pedestrian</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Park</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Mahalaxmi Temple</name>
+      <description>Ancient Hindu temple</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-orange</styleUrl>
+      <Point><coordinates>72.8093,18.9826,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Mahalaxmi Temple</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>amenity-place_of_worship</mwm:value></mwm:featureTypes>
+        <mwm:scale>16</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+    
+    <Placemark>
+      <name>Antilia Building</name>
+      <description>Famous residential skyscraper</description>
+      <TimeStamp><when>2025-08-02T18:30:00Z</when></TimeStamp>
+      <styleUrl>#placemark-red</styleUrl>
+      <Point><coordinates>72.8081,18.9704,0</coordinates></Point>
+      <ExtendedData xmlns:mwm="https://comaps.app">
+        <mwm:name><mwm:lang code="default">Antilia Building</mwm:lang></mwm:name>
+        <mwm:featureTypes><mwm:value>building</mwm:value></mwm:featureTypes>
+        <mwm:scale>17</mwm:scale>
+        <mwm:icon>Building</mwm:icon>
+        <mwm:visibility>1</mwm:visibility>
+      </ExtendedData>
+    </Placemark>
+  </Folder>
+</Document>
+</kml>

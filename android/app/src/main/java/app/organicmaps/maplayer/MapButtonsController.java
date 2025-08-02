@@ -165,6 +165,21 @@ public class MapButtonsController extends Fragment
       mButtonsMap.put(MapButtons.bookmarks, bookmarksButton);
     }
 
+    // KML import button
+    View kmlImportButton = mFrame.findViewById(R.id.btn_kml_import);
+    if (kmlImportButton != null)
+    {
+      kmlImportButton.setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.kmlImport));
+      mButtonsMap.put(MapButtons.kmlImport, kmlImportButton);
+    }
+    
+    View simpleDirectButton = mFrame.findViewById(R.id.btn_simple_direct);
+    if (simpleDirectButton != null)
+    {
+      simpleDirectButton.setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.simpleDirect));
+      mButtonsMap.put(MapButtons.simpleDirect, simpleDirectButton);
+    }
+
     // search button
     View searchButton = mFrame.findViewById(R.id.btn_search);
     if (searchButton != null)
@@ -522,6 +537,8 @@ public class MapButtonsController extends Fragment
     zoom,
     search,
     bookmarks,
+    kmlImport,
+    simpleDirect,
     menu,
     help,
     trackRecordingStatus

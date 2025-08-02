@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<name>CoMaps Bookmarks and Tracks</name>
+<NetworkLink><name>My Places</name><Link><href>files/My Places.kml</href></Link></NetworkLink>
+<NetworkLink><name>Satara places</name><Link><href>files/Satara places.kml</href></Link></NetworkLink>
+</Document>
+</kml>

@@ -416,7 +416,37 @@ public class MwmActivity extends BaseMwmFragmentActivity
 
   private void showBookmarks()
   {
-    BookmarkCategoriesActivity.start(this);
+        // Load and show test markers from local JSON file
+    try {
+      app.organicmaps.util.TestMarkersLoader.loadAndShowTestMarkers(this);
+      Utils.showToast(this, "Test markers loaded from JSON (manual creation)");
+    } catch (Exception e) {
+      Utils.showToast(this, "Failed to load test markers: " + e.getMessage());
+    }
+  }
+
+  private void showKmlImport()
+  {
+    // Import test markers from KML file
+    try {
+      app.organicmaps.util.TestMarkersLoader.loadKMLFile(this);
+      Utils.showToast(this, "KML import completed successfully!");
+    } catch (Exception e) {
+      Logger.e("MwmActivity", "KML import failed", e);
+      Utils.showToast(this, "KML import failed: " + e.getMessage());
+    }
+  }
+
+  private void showSimpleDirect()
+  {
+    // Create test markers directly via BookmarkManager
+    try {
+      app.organicmaps.util.SimpleBookmarkCreator.createTestBookmarks(this);
+      Utils.showToast(this, "Direct bookmark creation completed successfully!");
+    } catch (Exception e) {
+      Logger.e("MwmActivity", "Direct bookmark creation failed", e);
+      Utils.showToast(this, "Direct bookmark creation failed: " + e.getMessage());
+    }
   }
 
   private void onAddPlace()
@@ -982,6 +1012,8 @@ public class MwmActivity extends BaseMwmFragmentActivity
       }
       case toggleMapLayer -> toggleMapLayerBottomSheet();
       case bookmarks -> showBookmarks();
+      case kmlImport -> showKmlImport();
+      case simpleDirect -> showSimpleDirect();
       case search -> showSearch("");
       case menu ->
       {
