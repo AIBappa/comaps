@@ -56,6 +56,16 @@ public class TestMarkersLoader {
     
     private static void loadTestMarkersDelayed(@NonNull Context context) {
         try {
+            // First, let's check the current category state
+            Logger.d(TAG, "=== CATEGORY STATE ANALYSIS ===");
+            List<BookmarkCategory> existingCategories = BookmarkManager.INSTANCE.getCategories();
+            Logger.d(TAG, "Total existing categories: " + existingCategories.size());
+            
+            for (int i = 0; i < existingCategories.size(); i++) {
+                BookmarkCategory cat = existingCategories.get(i);
+                Logger.d(TAG, "Category " + i + ": ID=" + cat.getId() + ", Name='" + cat.getName() + "', Visible=" + cat.isVisible());
+            }
+            
             String jsonString = loadJsonFromAssets(context, TEST_MARKERS_FILE);
             if (jsonString == null) {
                 Logger.e(TAG, "Failed to load test markers JSON file");
