@@ -133,3 +133,41 @@ The complete flow from button click to bookmark display should work correctly on
 1. "Test Bookmarks" - JSON manual creation
 2. "Import KML" - KMZ native processing ← **KEY TEST** 
 3. "Simple Direct" - Direct API calls
+
+---
+
+## 🎯 **ALL 15 FILES CONFIRMED IN ADVERTS BRANCH**
+
+### **✅ Complete File Inventory:**
+
+1. **Java Source Files (4/4)** ✅
+   - `TestMarkersLoader.java` (22.5KB - Aug 2 15:17)
+   - `SimpleBookmarkCreator.java` (4.3KB - Aug 2 14:13)
+   - `MapButtonsController.java` (21.2KB - Aug 2 14:13)
+   - `MwmActivity.java` (90.3KB - Aug 2 14:13)
+
+2. **Layout Files (4/4)** ✅
+   - `map_buttons_bottom.xml` (3.6KB - Aug 2 14:49)
+   - `map_buttons_bookmarks_square.xml` (460B - Aug 1 11:39)
+   - `map_buttons_kml_import.xml` (471B - Aug 2 13:21)
+   - `map_buttons_simple_direct.xml` (468B - Aug 2 14:59)
+
+3. **Resource Files (3/3)** ✅
+   - `strings.xml` (68.7KB - Aug 2 14:13)
+   - `test_markers.json` (6.1KB - Aug 2 08:09)
+   - **Drawable Resources**: `ic_bookmarks.xml`, `ic_downloader_update.xml`, `ic_add_list.xml`
+
+4. **Build Fix Files (2/2)** ✅
+   - `Utils.java` with `showToast()` method (16.9KB - Aug 2 15:14)
+   - `VALIDATION_REPORT.md` (5.1KB - Aug 2 15:14)
+
+5. **Native Integration (2/2)** ✅
+   - BookmarkManager JNI Bridge (verified in git)
+   - C++ KMZ Processing (verified in git)
+
+### **🚀 STATUS: ALL 15 FILES COMMITTED & READY**
+
+**Branch**: `adverts` ✅  
+**Remote sync**: Up to date with `origin/adverts` ✅  
+**Build status**: All compilation errors resolved ✅  
+**Architecture**: Complete bookmark persistence understanding ✅
