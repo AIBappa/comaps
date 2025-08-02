@@ -14,10 +14,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.io.File;
+import java.io.FileOutputStream;
 
 public class TestMarkersLoader {
     private static final String TAG = TestMarkersLoader.class.getSimpleName();
     private static final String TEST_MARKERS_FILE = "test_markers.json";
+    private static final String TEST_KML_FILE = "test_markers.kml";
     private static final String PUNE_CATEGORY_NAME = "Pune Places";
     private static final String MUMBAI_CATEGORY_NAME = "Mumbai Places";
     
@@ -110,10 +113,76 @@ public class TestMarkersLoader {
             
             Logger.d(TAG, "Test markers loading completed");
             
+            // Also try loading KML file using native import
+            loadKMLFile(context);
+            
         } catch (JSONException e) {
             Logger.e(TAG, "Error parsing test markers JSON", e);
         } catch (Exception e) {
             Logger.e(TAG, "Unexpected error loading test markers", e);
+        }
+    }
+    
+    private static void loadKMLFile(@NonNull Context context) {
+        try {
+            Logger.d(TAG, "=== ATTEMPTING KML IMPORT ===");
+            
+            // Check if KML file exists in assets
+            InputStream kmlStream = context.getAssets().open(TEST_KML_FILE);
+            Logger.d(TAG, "Found KML file: " + TEST_KML_FILE);
+            
+            // Copy KML file from assets to temporary location for import
+            File tempDir = new File(context.getCacheDir(), "temp_bookmarks");
+            if (!tempDir.exists()) {
+                tempDir.mkdirs();
+            }
+            
+            File tempKmlFile = new File(tempDir, TEST_KML_FILE);
+            
+            // Copy the KML content to temporary file
+            try (InputStream is = context.getAssets().open(TEST_KML_FILE);
+                 FileOutputStream fos = new FileOutputStream(tempKmlFile)) {
+                
+                byte[] buffer = new byte[1024];
+                int length;
+                while ((length = is.read(buffer)) > 0) {
+                    fos.write(buffer, 0, length);
+                }
+                fos.flush();
+            }
+            
+            Logger.d(TAG, "Copied KML to temp file: " + tempKmlFile.getAbsolutePath());
+            Logger.d(TAG, "File exists: " + tempKmlFile.exists() + ", Size: " + tempKmlFile.length());
+            
+            // Create URI for the temporary file
+            android.net.Uri kmlUri = android.net.Uri.fromFile(tempKmlFile);
+            Logger.d(TAG, "Created URI: " + kmlUri);
+            
+            // Use BookmarkManager's native import
+            boolean importResult = BookmarkManager.INSTANCE.importBookmarksFile(
+                context.getContentResolver(), 
+                kmlUri, 
+                tempDir
+            );
+            
+            Logger.d(TAG, "📁 KML import result: " + importResult);
+            
+            // Log the categories after import
+            List<BookmarkCategory> categoriesAfterKML = BookmarkManager.INSTANCE.getCategories();
+            Logger.d(TAG, "📊 Categories after KML import: " + categoriesAfterKML.size());
+            for (BookmarkCategory cat : categoriesAfterKML) {
+                Logger.d(TAG, "  📂 Category: " + cat.getName() + " (ID: " + cat.getId() + ")");
+            }
+            
+            // Clean up temporary file
+            if (tempKmlFile.exists()) {
+                tempKmlFile.delete();
+            }
+            
+        } catch (IOException e) {
+            Logger.e(TAG, "KML file not found or IO error: " + e.getMessage(), e);
+        } catch (Exception e) {
+            Logger.e(TAG, "Error during KML import attempt", e);
         }
     }
     

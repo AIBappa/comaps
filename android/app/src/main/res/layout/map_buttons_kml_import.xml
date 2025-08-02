@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/btn_kml_import"
+  android:layout_width="@dimen/menu_line_height"
+  android:layout_height="@dimen/menu_line_height"
+  android:background="@drawable/map_button_shape"
+  android:contentDescription="@string/import_kml"
+  android:scaleType="centerInside"
+  android:src="@drawable/ic_folder_open" />

@@ -83,6 +83,8 @@
     <string name="bookmarks">Bookmarks</string>
     <!-- "Bookmarks and Tracks" dialog title, also sync it with iphone/plist.txt -->
     <string name="bookmarks_and_tracks">Bookmarks and Tracks</string>
+    <!-- Import KML button content description -->
+    <string name="import_kml">Import KML</string>
     <!-- Default bookmark list name -->
     <string name="core_my_places">My Places</string>
     <!-- Add bookmark dialog - bookmark name -->

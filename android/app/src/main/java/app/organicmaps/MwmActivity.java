@@ -420,6 +420,12 @@ public class MwmActivity extends BaseMwmFragmentActivity
     app.organicmaps.util.TestMarkersLoader.loadAndShowTestMarkers(this);
   }
 
+  private void showKmlImport()
+  {
+    // Import test markers from KML file
+    app.organicmaps.util.TestMarkersLoader.loadKMLFile(this);
+  }
+
   private void onAddPlace()
   {
     showPositionChooserForEditor(false, false);
@@ -983,6 +989,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
       }
       case toggleMapLayer -> toggleMapLayerBottomSheet();
       case bookmarks -> showBookmarks();
+      case kmlImport -> showKmlImport();
       case search -> showSearch("");
       case menu ->
       {
