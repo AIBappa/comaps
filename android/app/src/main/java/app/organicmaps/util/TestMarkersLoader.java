@@ -329,9 +329,16 @@ public class TestMarkersLoader {
     
     private static boolean bookmarkExists(@NonNull BookmarkCategory category, @NonNull String name, 
                                         double latitude, double longitude) {
-        // Simple check to avoid duplicate bookmarks
-        // In a real implementation, you might want a more sophisticated duplicate detection
-        return false; // For now, always add new bookmarks
+        // Check for an existing bookmark with the same name and coordinates in the category
+        List<Bookmark> bookmarks = category.getBookmarks();
+        for (Bookmark bookmark : bookmarks) {
+            if (name.equals(bookmark.getName())
+                && Double.compare(latitude, bookmark.getLat()) == 0
+                && Double.compare(longitude, bookmark.getLon()) == 0) {
+                return true;
+            }
+        }
+        return false;
     }
     
     public static void clearTestMarkers() {
