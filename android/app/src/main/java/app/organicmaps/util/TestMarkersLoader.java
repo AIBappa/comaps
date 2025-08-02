@@ -147,7 +147,7 @@ public class TestMarkersLoader {
             }
             
             // Ensure the category is visible on the map
-            BookmarkManager.INSTANCE.setCategoryVisibility(category.getId(), true);
+            BookmarkManager.INSTANCE.setVisibility(category.getId(), true);
             
         } catch (JSONException e) {
             Logger.e(TAG, "Error parsing marker data", e);
