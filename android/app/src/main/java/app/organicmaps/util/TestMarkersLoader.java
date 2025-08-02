@@ -330,7 +330,7 @@ public class TestMarkersLoader {
     private static boolean bookmarkExists(@NonNull BookmarkCategory category, @NonNull String name, 
                                         double latitude, double longitude) {
         // Check for an existing bookmark with the same name and coordinates in the category
-        List<Bookmark> bookmarks = category.getBookmarks();
+        List<Bookmark> bookmarks = BookmarkManager.INSTANCE.getBookmarks(category.getId());
         for (Bookmark bookmark : bookmarks) {
             if (name.equals(bookmark.getName())
                 && Double.compare(latitude, bookmark.getLat()) == 0
