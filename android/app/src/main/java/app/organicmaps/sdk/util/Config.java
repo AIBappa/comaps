@@ -60,6 +60,8 @@ public final class Config
    */
   private static final String KEY_MISC_FIRST_START_DIALOG_SEEN = "FirstStartDialogSeen";
 
+  private static SharedPreferences mPrefs;
+
   private Config() {}
 
   private static int getInt(String key, int def)
