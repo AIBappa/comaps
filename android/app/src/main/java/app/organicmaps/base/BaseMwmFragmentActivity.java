@@ -8,6 +8,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.activity.EdgeToEdge;
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.SystemBarStyle;
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
@@ -91,6 +92,15 @@ public abstract class BaseMwmFragmentActivity extends AppCompatActivity
       setContentView(layoutId);
 
     attachDefaultFragment();
+    
+    // Set up modern back button handling
+    getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+      @Override
+      public void handleOnBackPressed() {
+        handleBackPressed();
+      }
+    });
+    
     mSafeCreated = true;
   }
 
@@ -155,12 +165,11 @@ public abstract class BaseMwmFragmentActivity extends AppCompatActivity
     setSupportActionBar(getToolbar());
   }
 
-  @Override
-  public void onBackPressed()
+  private void handleBackPressed()
   {
     if (getFragmentClass() == null)
     {
-      super.onBackPressed();
+      finish();
       return;
     }
     FragmentManager manager = getSupportFragmentManager();
@@ -169,14 +178,14 @@ public abstract class BaseMwmFragmentActivity extends AppCompatActivity
 
     if (fragment == null)
     {
-      super.onBackPressed();
+      finish();
       return;
     }
 
     if (onBackPressedInternal(fragment))
       return;
 
-    super.onBackPressed();
+    finish();
   }
 
   private boolean onBackPressedInternal(@NonNull Fragment currentFragment)

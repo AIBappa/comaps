@@ -479,7 +479,7 @@ public class PlacePageView extends Fragment
           Editor.nativeShouldEnableEditPlace()
               ? ContextCompat.getColor(getContext(),
                                        UiUtils.getStyledResourceId(getContext(), androidx.appcompat.R.attr.colorAccent))
-              : getResources().getColor(R.color.button_accent_text_disabled);
+              : ContextCompat.getColor(getContext(), R.color.button_accent_text_disabled);
       mTvEditPlace.setTextColor(editPlaceButtonColor);
       mTvAddBusiness.setTextColor(editPlaceButtonColor);
       mTvAddPlace.setTextColor(editPlaceButtonColor);

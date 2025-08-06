@@ -9,6 +9,7 @@ import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Handler;
+import android.os.Looper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
@@ -102,7 +103,7 @@ public class LocationHelper implements BaseLocationProvider.Listener
     mContext = context;
     mSensorHelper = sensorHelper;
     mLocationProvider = LocationProviderFactory.getProvider(mContext, this);
-    mHandler = new Handler();
+    mHandler = new Handler(Looper.getMainLooper());
   }
 
   /**

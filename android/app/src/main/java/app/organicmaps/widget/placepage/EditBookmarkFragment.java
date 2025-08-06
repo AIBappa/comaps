@@ -2,6 +2,7 @@ package app.organicmaps.widget.placepage;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -144,9 +145,15 @@ public class EditBookmarkFragment extends BaseMwmDialogFragment implements View.
     mIvColor.setOnClickListener(this);
 
     // For tracks an bookmarks same category is used so this portion is common for both
-    if (savedInstanceState != null && savedInstanceState.getParcelable(STATE_BOOKMARK_CATEGORY) != null)
-      mBookmarkCategory = savedInstanceState.getParcelable(STATE_BOOKMARK_CATEGORY);
-    else
+    if (savedInstanceState != null) {
+      BookmarkCategory category = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+          ? savedInstanceState.getParcelable(STATE_BOOKMARK_CATEGORY, BookmarkCategory.class)
+          : savedInstanceState.getParcelable(STATE_BOOKMARK_CATEGORY);
+      if (category != null) {
+        mBookmarkCategory = category;
+      }
+    }
+    if (mBookmarkCategory == null)
     {
       long categoryId = args.getLong(EXTRA_CATEGORY_ID);
       mBookmarkCategory = BookmarkManager.INSTANCE.getCategoryById(categoryId);
@@ -158,9 +165,15 @@ public class EditBookmarkFragment extends BaseMwmDialogFragment implements View.
       case TYPE_BOOKMARK ->
       {
         mBookmark = BookmarkManager.INSTANCE.getBookmarkInfo(id);
-        if (savedInstanceState != null && savedInstanceState.getParcelable(STATE_ICON) != null)
-          mIcon = savedInstanceState.getParcelable(STATE_ICON);
-        else if (mBookmark != null)
+        if (savedInstanceState != null) {
+          Icon icon = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+              ? savedInstanceState.getParcelable(STATE_ICON, Icon.class)
+              : savedInstanceState.getParcelable(STATE_ICON);
+          if (icon != null) {
+            mIcon = icon;
+          }
+        }
+        if (mIcon == null && mBookmark != null)
           mIcon = mBookmark.getIcon();
         refreshBookmark();
       }
