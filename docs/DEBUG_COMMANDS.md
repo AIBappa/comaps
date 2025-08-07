@@ -70,3 +70,6 @@ All the following commands require an app restart:
 
 - `?all-types`: Shows all internal types in place page
 - `?no-all-types`: Disables showing all internal types in place page
+
+## Debug Build
+- ABI_FILTERS=arm64-v8a ./gradlew assembleFdroidDebug
